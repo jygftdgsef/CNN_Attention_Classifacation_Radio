@@ -1,0 +1,61 @@
+{
+  "architecture": "CNNAvecCBAM_89636_apres_bloc3_r16_k7_residuel_v2",
+  "graine": 42,
+  "lot": 16,
+  "max_epoques": 20,
+  "patience": 4,
+  "critere": "val_f1_macro",
+  "amelioration": "strictement superieure",
+  "grille": [
+    [
+      0.001,
+      0.3
+    ],
+    [
+      0.001,
+      0.5
+    ],
+    [
+      0.0005,
+      0.3
+    ],
+    [
+      0.0005,
+      0.5
+    ],
+    [
+      0.0001,
+      0.3
+    ],
+    [
+      0.0001,
+      0.5
+    ]
+  ],
+  "optimiseur": "Adam",
+  "weight_decay": 0.0,
+  "pretraitement": "L; ImageOps.pad 224 bilineaire noir centre; /255; aucune augmentation",
+  "classes": {
+    "NORMAL": 0,
+    "PNEUMONIA": 1
+  },
+  "poids_classes": [
+    1.7608897686004639,
+    0.698272705078125
+  ],
+  "sha256_csv": {
+    "train": "99930a915b8f5f9d72183e83d8e793068d9ccea6099606d59ddf2a4af9de270b",
+    "val": "5cbe140b6eeab5c66be29bf7cf6387e2846d308a80076cd50447c5be2fe5eede"
+  },
+  "versions": {
+    "python": "3.11.16 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:36:16) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pillow": "12.3.0",
+    "sklearn": "1.9.1"
+  },
+  "threads_torch": 4,
+  "correction_v2": "Ajout d'une connexion residuelle autour du CBAM (x + attention(x) au lieu de attention(x) seul). Motif : les deux sigmoides du CBAM valent ~0.5 a l'initialisation, ce qui attenuait le signal d'un facteur ~0.25 avant meme le debut de l'entrainement dans la v1 (dossier cnn_cbam_grille_v1). Aucun autre element du protocole n'a change par rapport au notebook 05 (CNN classique) ni a la v1 de ce notebook : meme grille, meme budget (20 epoques, patience 4), meme graine, meme ratio de reduction (16), meme emplacement (apres bloc 3).",
+  "limite": "Recherche exploratoire apres consultation anterieure du test. Robustesse multi-graines non encore mesuree. Un seul changement architectural teste ici (residuel) pour permettre une attribution causale claire ; si le F1 macro reste inferieur au CNN classique apres cette correction, d'autres leviers (ratio de reduction, placement multi-blocs, patience allongee, weight_decay) restent a tester un par un, pas combines."
+}

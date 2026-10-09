@@ -1,0 +1,20 @@
+{
+  "modele": "CNN_classique",
+  "graine": 42,
+  "augmentation": "luminosite_contraste_v1",
+  "indice": 2,
+  "lr": 0.001,
+  "dropout": 0.5,
+  "epoque_retenue": 6,
+  "epoque_finale": 10,
+  "arret": "patience",
+  "duree_minutes": 42.38667588333331,
+  "sauvegarde": "C:\\Users\\David KUNYIMA\\OneDrive\\Desktop\\Memoire_CNN_Attention\\optimisation\\augmentation_luminosite_contraste_v1\\CNN_classique\\graine_42\\configuration_02\\meilleur.pt",
+  "val_perte": 0.14207304260048365,
+  "val_exactitude": 0.9517313746065058,
+  "val_precision_pneumonie": 0.973293768545994,
+  "val_rappel_pneumonie": 0.9590643274853801,
+  "val_specificite_NORMAL": 0.9330855018587361,
+  "val_f1_pneumonie": 0.9661266568483063,
+  "val_f1_macro": 0.9410925255044451
+}

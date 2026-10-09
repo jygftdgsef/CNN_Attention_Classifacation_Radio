@@ -1,0 +1,109 @@
+﻿version,modele,graine,erreur,tiers_format,n_images,taux_erreur_pct
+v2 sans augmentation,CNN_classique,42,faux positifs (radios NORMAL),format le plus étroit,77,36.363636363636367
+v2 sans augmentation,CNN_classique,42,faux positifs (radios NORMAL),format intermédiaire,77,36.363636363636367
+v2 sans augmentation,CNN_classique,42,faux positifs (radios NORMAL),format le plus large,77,71.428571428571431
+v2 sans augmentation,CNN_classique,42,faux négatifs (radios PNEUMONIA),format le plus étroit,129,3.8759689922480618
+v2 sans augmentation,CNN_classique,42,faux négatifs (radios PNEUMONIA),format intermédiaire,129,3.8759689922480618
+v2 sans augmentation,CNN_classique,42,faux négatifs (radios PNEUMONIA),format le plus large,129,0.77519379844961245
+v2 sans augmentation,CNN_classique,123,faux positifs (radios NORMAL),format le plus étroit,77,24.675324675324674
+v2 sans augmentation,CNN_classique,123,faux positifs (radios NORMAL),format intermédiaire,77,41.558441558441558
+v2 sans augmentation,CNN_classique,123,faux positifs (radios NORMAL),format le plus large,77,83.116883116883116
+v2 sans augmentation,CNN_classique,123,faux négatifs (radios PNEUMONIA),format le plus étroit,129,3.8759689922480618
+v2 sans augmentation,CNN_classique,123,faux négatifs (radios PNEUMONIA),format intermédiaire,129,2.3255813953488373
+v2 sans augmentation,CNN_classique,123,faux négatifs (radios PNEUMONIA),format le plus large,129,0
+v2 sans augmentation,CNN_classique,2026,faux positifs (radios NORMAL),format le plus étroit,77,22.077922077922079
+v2 sans augmentation,CNN_classique,2026,faux positifs (radios NORMAL),format intermédiaire,77,36.363636363636367
+v2 sans augmentation,CNN_classique,2026,faux positifs (radios NORMAL),format le plus large,77,72.727272727272734
+v2 sans augmentation,CNN_classique,2026,faux négatifs (radios PNEUMONIA),format le plus étroit,129,10.852713178294573
+v2 sans augmentation,CNN_classique,2026,faux négatifs (radios PNEUMONIA),format intermédiaire,129,3.8759689922480618
+v2 sans augmentation,CNN_classique,2026,faux négatifs (radios PNEUMONIA),format le plus large,129,0
+v2 sans augmentation,CNN_CBAM,42,faux positifs (radios NORMAL),format le plus étroit,77,55.844155844155843
+v2 sans augmentation,CNN_CBAM,42,faux positifs (radios NORMAL),format intermédiaire,77,55.844155844155843
+v2 sans augmentation,CNN_CBAM,42,faux positifs (radios NORMAL),format le plus large,77,80.519480519480524
+v2 sans augmentation,CNN_CBAM,42,faux négatifs (radios PNEUMONIA),format le plus étroit,129,0.77519379844961245
+v2 sans augmentation,CNN_CBAM,42,faux négatifs (radios PNEUMONIA),format intermédiaire,129,0
+v2 sans augmentation,CNN_CBAM,42,faux négatifs (radios PNEUMONIA),format le plus large,129,0
+v2 sans augmentation,CNN_CBAM,123,faux positifs (radios NORMAL),format le plus étroit,77,53.246753246753244
+v2 sans augmentation,CNN_CBAM,123,faux positifs (radios NORMAL),format intermédiaire,77,53.246753246753244
+v2 sans augmentation,CNN_CBAM,123,faux positifs (radios NORMAL),format le plus large,77,94.805194805194802
+v2 sans augmentation,CNN_CBAM,123,faux négatifs (radios PNEUMONIA),format le plus étroit,129,1.5503875968992249
+v2 sans augmentation,CNN_CBAM,123,faux négatifs (radios PNEUMONIA),format intermédiaire,129,0.77519379844961245
+v2 sans augmentation,CNN_CBAM,123,faux négatifs (radios PNEUMONIA),format le plus large,129,0
+v2 sans augmentation,CNN_CBAM,2026,faux positifs (radios NORMAL),format le plus étroit,77,27.27272727272727
+v2 sans augmentation,CNN_CBAM,2026,faux positifs (radios NORMAL),format intermédiaire,77,37.662337662337663
+v2 sans augmentation,CNN_CBAM,2026,faux positifs (radios NORMAL),format le plus large,77,74.025974025974023
+v2 sans augmentation,CNN_CBAM,2026,faux négatifs (radios PNEUMONIA),format le plus étroit,129,6.2015503875968996
+v2 sans augmentation,CNN_CBAM,2026,faux négatifs (radios PNEUMONIA),format intermédiaire,129,3.1007751937984498
+v2 sans augmentation,CNN_CBAM,2026,faux négatifs (radios PNEUMONIA),format le plus large,129,0
+v2 avec augmentation,CNN_classique,42,faux positifs (radios NORMAL),format le plus étroit,77,19.480519480519483
+v2 avec augmentation,CNN_classique,42,faux positifs (radios NORMAL),format intermédiaire,77,36.363636363636367
+v2 avec augmentation,CNN_classique,42,faux positifs (radios NORMAL),format le plus large,77,90.909090909090907
+v2 avec augmentation,CNN_classique,42,faux négatifs (radios PNEUMONIA),format le plus étroit,129,7.7519379844961236
+v2 avec augmentation,CNN_classique,42,faux négatifs (radios PNEUMONIA),format intermédiaire,129,1.5503875968992249
+v2 avec augmentation,CNN_classique,42,faux négatifs (radios PNEUMONIA),format le plus large,129,0
+v2 avec augmentation,CNN_classique,123,faux positifs (radios NORMAL),format le plus étroit,77,37.662337662337663
+v2 avec augmentation,CNN_classique,123,faux positifs (radios NORMAL),format intermédiaire,77,41.558441558441558
+v2 avec augmentation,CNN_classique,123,faux positifs (radios NORMAL),format le plus large,77,68.831168831168839
+v2 avec augmentation,CNN_classique,123,faux négatifs (radios PNEUMONIA),format le plus étroit,129,3.8759689922480618
+v2 avec augmentation,CNN_classique,123,faux négatifs (radios PNEUMONIA),format intermédiaire,129,3.1007751937984498
+v2 avec augmentation,CNN_classique,123,faux négatifs (radios PNEUMONIA),format le plus large,129,0
+v2 avec augmentation,CNN_classique,2026,faux positifs (radios NORMAL),format le plus étroit,77,33.766233766233768
+v2 avec augmentation,CNN_classique,2026,faux positifs (radios NORMAL),format intermédiaire,77,40.259740259740262
+v2 avec augmentation,CNN_classique,2026,faux positifs (radios NORMAL),format le plus large,77,83.116883116883116
+v2 avec augmentation,CNN_classique,2026,faux négatifs (radios PNEUMONIA),format le plus étroit,129,5.4263565891472867
+v2 avec augmentation,CNN_classique,2026,faux négatifs (radios PNEUMONIA),format intermédiaire,129,2.3255813953488373
+v2 avec augmentation,CNN_classique,2026,faux négatifs (radios PNEUMONIA),format le plus large,129,0
+v2 avec augmentation,CNN_CBAM,42,faux positifs (radios NORMAL),format le plus étroit,77,37.662337662337663
+v2 avec augmentation,CNN_CBAM,42,faux positifs (radios NORMAL),format intermédiaire,77,37.662337662337663
+v2 avec augmentation,CNN_CBAM,42,faux positifs (radios NORMAL),format le plus large,77,77.922077922077932
+v2 avec augmentation,CNN_CBAM,42,faux négatifs (radios PNEUMONIA),format le plus étroit,129,4.6511627906976747
+v2 avec augmentation,CNN_CBAM,42,faux négatifs (radios PNEUMONIA),format intermédiaire,129,1.5503875968992249
+v2 avec augmentation,CNN_CBAM,42,faux négatifs (radios PNEUMONIA),format le plus large,129,0
+v2 avec augmentation,CNN_CBAM,123,faux positifs (radios NORMAL),format le plus étroit,77,31.168831168831169
+v2 avec augmentation,CNN_CBAM,123,faux positifs (radios NORMAL),format intermédiaire,77,41.558441558441558
+v2 avec augmentation,CNN_CBAM,123,faux positifs (radios NORMAL),format le plus large,77,90.909090909090907
+v2 avec augmentation,CNN_CBAM,123,faux négatifs (radios PNEUMONIA),format le plus étroit,129,2.3255813953488373
+v2 avec augmentation,CNN_CBAM,123,faux négatifs (radios PNEUMONIA),format intermédiaire,129,1.5503875968992249
+v2 avec augmentation,CNN_CBAM,123,faux négatifs (radios PNEUMONIA),format le plus large,129,0
+v2 avec augmentation,CNN_CBAM,2026,faux positifs (radios NORMAL),format le plus étroit,77,11.688311688311687
+v2 avec augmentation,CNN_CBAM,2026,faux positifs (radios NORMAL),format intermédiaire,77,31.168831168831169
+v2 avec augmentation,CNN_CBAM,2026,faux positifs (radios NORMAL),format le plus large,77,71.428571428571431
+v2 avec augmentation,CNN_CBAM,2026,faux négatifs (radios PNEUMONIA),format le plus étroit,129,9.3023255813953494
+v2 avec augmentation,CNN_CBAM,2026,faux négatifs (radios PNEUMONIA),format intermédiaire,129,3.8759689922480618
+v2 avec augmentation,CNN_CBAM,2026,faux négatifs (radios PNEUMONIA),format le plus large,129,0
+v3 sans raccourci,CNN_classique,42,faux positifs (radios NORMAL),format le plus étroit,77,58.441558441558442
+v3 sans raccourci,CNN_classique,42,faux positifs (radios NORMAL),format intermédiaire,77,58.441558441558442
+v3 sans raccourci,CNN_classique,42,faux positifs (radios NORMAL),format le plus large,77,76.623376623376629
+v3 sans raccourci,CNN_classique,42,faux négatifs (radios PNEUMONIA),format le plus étroit,129,3.1007751937984498
+v3 sans raccourci,CNN_classique,42,faux négatifs (radios PNEUMONIA),format intermédiaire,129,3.1007751937984498
+v3 sans raccourci,CNN_classique,42,faux négatifs (radios PNEUMONIA),format le plus large,129,0.77519379844961245
+v3 sans raccourci,CNN_classique,123,faux positifs (radios NORMAL),format le plus étroit,77,61.038961038961034
+v3 sans raccourci,CNN_classique,123,faux positifs (radios NORMAL),format intermédiaire,77,62.337662337662337
+v3 sans raccourci,CNN_classique,123,faux positifs (radios NORMAL),format le plus large,77,80.519480519480524
+v3 sans raccourci,CNN_classique,123,faux négatifs (radios PNEUMONIA),format le plus étroit,129,3.8759689922480618
+v3 sans raccourci,CNN_classique,123,faux négatifs (radios PNEUMONIA),format intermédiaire,129,1.5503875968992249
+v3 sans raccourci,CNN_classique,123,faux négatifs (radios PNEUMONIA),format le plus large,129,0.77519379844961245
+v3 sans raccourci,CNN_classique,2026,faux positifs (radios NORMAL),format le plus étroit,77,55.844155844155843
+v3 sans raccourci,CNN_classique,2026,faux positifs (radios NORMAL),format intermédiaire,77,57.142857142857139
+v3 sans raccourci,CNN_classique,2026,faux positifs (radios NORMAL),format le plus large,77,74.025974025974023
+v3 sans raccourci,CNN_classique,2026,faux négatifs (radios PNEUMONIA),format le plus étroit,129,2.3255813953488373
+v3 sans raccourci,CNN_classique,2026,faux négatifs (radios PNEUMONIA),format intermédiaire,129,2.3255813953488373
+v3 sans raccourci,CNN_classique,2026,faux négatifs (radios PNEUMONIA),format le plus large,129,0.77519379844961245
+v3 sans raccourci,CNN_CBAM,42,faux positifs (radios NORMAL),format le plus étroit,77,41.558441558441558
+v3 sans raccourci,CNN_CBAM,42,faux positifs (radios NORMAL),format intermédiaire,77,49.350649350649348
+v3 sans raccourci,CNN_CBAM,42,faux positifs (radios NORMAL),format le plus large,77,74.025974025974023
+v3 sans raccourci,CNN_CBAM,42,faux négatifs (radios PNEUMONIA),format le plus étroit,129,2.3255813953488373
+v3 sans raccourci,CNN_CBAM,42,faux négatifs (radios PNEUMONIA),format intermédiaire,129,1.5503875968992249
+v3 sans raccourci,CNN_CBAM,42,faux négatifs (radios PNEUMONIA),format le plus large,129,0.77519379844961245
+v3 sans raccourci,CNN_CBAM,123,faux positifs (radios NORMAL),format le plus étroit,77,58.441558441558442
+v3 sans raccourci,CNN_CBAM,123,faux positifs (radios NORMAL),format intermédiaire,77,49.350649350649348
+v3 sans raccourci,CNN_CBAM,123,faux positifs (radios NORMAL),format le plus large,77,74.025974025974023
+v3 sans raccourci,CNN_CBAM,123,faux négatifs (radios PNEUMONIA),format le plus étroit,129,1.5503875968992249
+v3 sans raccourci,CNN_CBAM,123,faux négatifs (radios PNEUMONIA),format intermédiaire,129,2.3255813953488373
+v3 sans raccourci,CNN_CBAM,123,faux négatifs (radios PNEUMONIA),format le plus large,129,0.77519379844961245
+v3 sans raccourci,CNN_CBAM,2026,faux positifs (radios NORMAL),format le plus étroit,77,33.766233766233768
+v3 sans raccourci,CNN_CBAM,2026,faux positifs (radios NORMAL),format intermédiaire,77,41.558441558441558
+v3 sans raccourci,CNN_CBAM,2026,faux positifs (radios NORMAL),format le plus large,77,70.129870129870127
+v3 sans raccourci,CNN_CBAM,2026,faux négatifs (radios PNEUMONIA),format le plus étroit,129,3.1007751937984498
+v3 sans raccourci,CNN_CBAM,2026,faux négatifs (radios PNEUMONIA),format intermédiaire,129,1.5503875968992249
+v3 sans raccourci,CNN_CBAM,2026,faux négatifs (radios PNEUMONIA),format le plus large,129,0.77519379844961245

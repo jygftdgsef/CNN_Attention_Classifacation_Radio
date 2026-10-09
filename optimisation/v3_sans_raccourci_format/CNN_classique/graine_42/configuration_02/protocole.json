@@ -1,0 +1,45 @@
+{
+  "version": "v3_sans_raccourci_format",
+  "architecture": "CNNClassique_89026_v1",
+  "graine": 42,
+  "lot": 16,
+  "max_epoques": 20,
+  "patience": 4,
+  "critere": "val_f1_macro",
+  "amelioration": "strictement superieure",
+  "grille": [
+    [
+      0.001,
+      0.5
+    ]
+  ],
+  "optimiseur": "Adam",
+  "weight_decay": 0.0,
+  "pretraitement": "L; resize 224x224 bilineaire sans padding (etirement); ImageOps.equalize; /255; aucune augmentation",
+  "classes": {
+    "NORMAL": 0,
+    "PNEUMONIA": 1
+  },
+  "poids_classes": [
+    1.7608897686004639,
+    0.698272705078125
+  ],
+  "sha256_csv": {
+    "train": "99930a915b8f5f9d72183e83d8e793068d9ccea6099606d59ddf2a4af9de270b",
+    "val": "5cbe140b6eeab5c66be29bf7cf6387e2846d308a80076cd50447c5be2fe5eede"
+  },
+  "sha256_entrees_v3": {
+    "train": "16a3e447acca537cc03a765419d44fa8dfd490c902ef2dcd57228cd70899471a",
+    "val": "5e05538aea8308a26362c8c4a3165565fdb1896660ee5396d9091efdfc3ed432"
+  },
+  "versions": {
+    "python": "3.11.16 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:36:16) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pillow": "12.3.0",
+    "sklearn": "1.9.1"
+  },
+  "threads_torch": 4,
+  "limite": "Reglages choisis avec la preparation v2, non reoptimises; test deja consulte dans le projet; indices residuels possibles (deformation, resolution, marqueurs)."
+}

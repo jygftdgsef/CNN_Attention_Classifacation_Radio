@@ -1,0 +1,8 @@
+﻿hypothese,comparaison,unite,sens_predit,estimation,ic95_bas,ic95_haut,cas_dans_le_sens,cas,verdict
+H1,v2 sans augmentation : CBAM − classique,F1 macro,aucun,-0.059602665667000003,-0.078851837425999993,-0.041560985560999998,3,3,"écart démontré, en faveur du classique"
+H1,v2 avec augmentation : CBAM − classique,F1 macro,aucun,0.011834180652999999,-0.00029123993799999999,0.024166774814000001,1,3,pas d'écart démontré
+H1,v3 sans raccourci : CBAM − classique,F1 macro,aucun,0.064429412384999996,0.042981887875999998,0.087921136356000004,3,3,"écart démontré, en faveur du CBAM"
+H2,spécificité : v3 − v2 sans augmentation,points de %,positif,-6.6378066378000007,-10.8478671641,-2.1187457645999999,2,6,contredite
+H3,faux positifs : v2 avec − v2 sans augmentation,points de %,négatif,-4.1125541125540002,-6.2318840579710004,-1.9942232055060001,4,6,partielle
+H4 partie 1,"ρ format → score parmi les NORMAL, 12 modèles v2",ρ de Spearman,positif,0.51526866436899998,0.42142010443,0.59943197097900003,12,12,confirmée
+H4 partie 2,|ρ| : v3 − v2 sans augmentation,|ρ| de Spearman,négatif,-0.17154280002899999,-0.25590143554900002,-0.082956007006000004,6,6,confirmée

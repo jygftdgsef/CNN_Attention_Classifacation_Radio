@@ -1,0 +1,198 @@
+{
+  "version_analyse": "evaluation_finale_test_v1",
+  "ensemble": "test",
+  "effectif": 618,
+  "patients": 426,
+  "sha256_test_csv": "dd117e6916f76ff8624684e4bed3c6c4233dace4262eb89985af3d24c645c7f0",
+  "sha256_entrees_test_v2": "dc1e9a72a3aecdd10bda5a327a38fef95ff6c86221c8126cb0155a52165bafed",
+  "sha256_entrees_test_v3": "48d5dcf849092e4a7db53f950e5efdb7b1f77294b88a982b1b42b7c814f7728a",
+  "hypotheses": {
+    "H1": "Question du mémoire : pour chaque version, écart de F1 macro CBAM − classique, apparié par graine. Aucun sens n'est prédit.",
+    "H2": "Raccourci : la spécificité NORMAL des modèles v3 est supérieure à celle des modèles v2 sans augmentation, à architecture et graine égales.",
+    "H3": "Augmentation : les modèles v2 avec augmentation font moins de faux positifs que les modèles v2 sans augmentation, à architecture et graine égales.",
+    "H4": "Mécanisme : pour les modèles v2, la probabilité de classer une radio NORMAL en PNEUMONIA augmente avec le rapport largeur/hauteur de l'image d'origine ; cette association est plus faible pour v3."
+  },
+  "hypotheses_fixees": "notebook 12, le 28/09/2026, avant l'entrainement v3",
+  "operationnalisation_et_regles_fixees": "notebook 14, le 28/09/2026, avant le chargement du test",
+  "operationnalisation": {
+    "H1": "par version : moyenne sur 3 graines de F1 macro(CBAM) - F1 macro(classique); aucun sens predit",
+    "H2": "moyenne sur 6 paires (architecture, graine) de specificite(v3) - specificite(v2 sans); sens predit positif",
+    "H3": "moyenne sur 6 paires de taux de faux positifs en %(v2 avec) - (v2 sans); sens predit negatif",
+    "H4 partie 1": "moyenne sur les 12 modeles v2 de rho de Spearman(rapport largeur/hauteur d'origine, logit PNEUMONIA - logit NORMAL) parmi les radios NORMAL; sens predit positif",
+    "H4 partie 2": "moyenne sur 6 paires de |rho(v3)| - |rho(v2 sans)| (force de l'association, quel que soit son signe); sens predit negatif"
+  },
+  "regles": {
+    "confirmee": "IC95 entierement du cote predit ET toutes les paires dans le sens predit",
+    "partielle": "estimation du cote predit, une seule des deux conditions remplie",
+    "non demontree": "estimation du cote predit, aucune des deux conditions",
+    "non confirmee": "estimation nulle ou du cote oppose, IC95 contenant 0",
+    "contredite": "IC95 entierement du cote oppose",
+    "H1": "ecart demontre si IC95 exclut 0 et 3 graines de meme signe; ecart partiel si une seule condition; sinon pas d'ecart demontre"
+  },
+  "seuil": "classe du plus grand logit, NORMAL en cas d'egalite",
+  "bootstrap": {
+    "tirages": 2000,
+    "graine": 20260928,
+    "generateur": "numpy PCG64",
+    "unite": "groupe (patient presume, notebook 02)",
+    "stratification": "par classe, nombre de patients de chaque classe conserve",
+    "intervalle": "percentiles 2,5 et 97,5"
+  },
+  "controle_avant_test": "logits des 32 premieres radios de validation compares aux predictions de reference",
+  "modeles": [
+    {
+      "version": "v2 sans augmentation",
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "epoque": 20,
+      "sha256_sauvegarde": "502a6020c3ddce3e1d1383222231d3e39098127daf94cd8e61a62097303eb6d9",
+      "sauvegarde_relative": "optimisation/cnn_cbam_grille_v2_residuel/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v2 sans augmentation",
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "epoque": 14,
+      "sha256_sauvegarde": "eb475ab86cf6b1633fd9c39188f531589c251d2207c533ef2d575d088d7a776c",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v2/CNN_CBAM/graine_123/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v2 sans augmentation",
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "epoque": 10,
+      "sha256_sauvegarde": "c3d6002a0fbb33cb53204f2e5f1336e108f3fcf1ad85e8b57c0634ad40f8c6be",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v2/CNN_CBAM/graine_2026/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v2 sans augmentation",
+      "modele": "CNN_classique",
+      "graine": 42,
+      "epoque": 19,
+      "sha256_sauvegarde": "49d7518b9118082fabb3c447d9bf4deab541fe82d172f64017f66853c190da2a",
+      "sauvegarde_relative": "optimisation/cnn_classique_grille_v1/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v2 sans augmentation",
+      "modele": "CNN_classique",
+      "graine": 123,
+      "epoque": 18,
+      "sha256_sauvegarde": "a88f5a3424921d7fee2821fde1a8e7c94a16dd88b32a9ed3e03e1d1bbae9681a",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v2/CNN_classique/graine_123/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v2 sans augmentation",
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "epoque": 8,
+      "sha256_sauvegarde": "63bfa2423b682f3bc8d0565fe8add5dc325edfb5b4e1038787ad90462391c7cd",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v2/CNN_classique/graine_2026/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v2 avec augmentation",
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "epoque": 11,
+      "sha256_sauvegarde": "ab944419eeca95a5969d755a6ec085b65f3bb9b5e0948c184f35934c5a60de78",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_CBAM/graine_42/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v2 avec augmentation",
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "epoque": 12,
+      "sha256_sauvegarde": "0f96779663f1a5d81a07ee80a7ef9a594bada3ee5b4720679fbd7caa02d947c8",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_CBAM/graine_123/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v2 avec augmentation",
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "epoque": 12,
+      "sha256_sauvegarde": "a591e0dd5acef5bb1b486dd7431f9dc51bba96390681b7090cac08a1a4a89660",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_CBAM/graine_2026/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v2 avec augmentation",
+      "modele": "CNN_classique",
+      "graine": 42,
+      "epoque": 6,
+      "sha256_sauvegarde": "cafb38ef2cc6a20632a81bc7cde092217c689753853eed8c83bc2b6686ab8553",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_classique/graine_42/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v2 avec augmentation",
+      "modele": "CNN_classique",
+      "graine": 123,
+      "epoque": 18,
+      "sha256_sauvegarde": "6f69f85e0e7d2d62237606791282f9e634d6267cd334156f234bc01928f99952",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_classique/graine_123/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v2 avec augmentation",
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "epoque": 18,
+      "sha256_sauvegarde": "fee2d815df3bcefa13e9178aaef0f277685f0a03a322dc2dd125e1b544947fd3",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_classique/graine_2026/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v3 sans raccourci",
+      "modele": "CNN_classique",
+      "graine": 42,
+      "epoque": 9,
+      "sha256_sauvegarde": "178442363ad771d242ab5f81e54bbc8593ca60679ca97f89cefc6790ee49dfc1",
+      "sauvegarde_relative": "optimisation/v3_sans_raccourci_format/CNN_classique/graine_42/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v3 sans raccourci",
+      "modele": "CNN_classique",
+      "graine": 123,
+      "epoque": 14,
+      "sha256_sauvegarde": "ed9400568e7165342646e86656f57f7c0002257d7f8ffc89e46b4a20554415b5",
+      "sauvegarde_relative": "optimisation/v3_sans_raccourci_format/CNN_classique/graine_123/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v3 sans raccourci",
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "epoque": 20,
+      "sha256_sauvegarde": "a1f84d00ec764e213292bcad043b78fa15be7f3db053ac6612d8c32f5c1611e1",
+      "sauvegarde_relative": "optimisation/v3_sans_raccourci_format/CNN_classique/graine_2026/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v3 sans raccourci",
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "epoque": 20,
+      "sha256_sauvegarde": "2ea41210ff0dfe72fb62882c4bef89f6d46814e16d2926e96a76ed018a65f88c",
+      "sauvegarde_relative": "optimisation/v3_sans_raccourci_format/CNN_CBAM/graine_42/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v3 sans raccourci",
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "epoque": 18,
+      "sha256_sauvegarde": "0774d0bc217837730d480418a22bd5f18323a4aae3afae0e8e68556fc56d710f",
+      "sauvegarde_relative": "optimisation/v3_sans_raccourci_format/CNN_CBAM/graine_123/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v3 sans raccourci",
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "epoque": 16,
+      "sha256_sauvegarde": "09a5cf80f7e8650b0aa5a0775ec5003f68802b56e9137787ac7665a7aa9e3151",
+      "sauvegarde_relative": "optimisation/v3_sans_raccourci_format/CNN_CBAM/graine_2026/configuration_03/meilleur.pt"
+    }
+  ],
+  "versions": {
+    "python": "3.11.16 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:36:16) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pillow": "12.3.0",
+    "sklearn": "1.9.1"
+  },
+  "threads_torch": 4,
+  "limite": "Test deja consulte au notebook 03 avec les modeles v1; 7 verdicts sans correction multiple; 3 graines; indices residuels en v3."
+}

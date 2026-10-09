@@ -1,0 +1,115 @@
+{
+  "id_protocole": "1af4b47d084f5fcbe157c5b734db5120f491dba1ec1ba8f4f1f37f79876eecac",
+  "masques_valides_pct": {
+    "train": 99.18421052631578,
+    "val": 98.63588667366213,
+    "test": 100.0
+  },
+  "resultats_v4_fragiles": false,
+  "sens_lateralite": 1.0,
+  "modeles_v4": [
+    {
+      "version": "v4 recadrage poumons",
+      "modele": "CNN_classique",
+      "graine": 42,
+      "epoque": 13,
+      "sha256_sauvegarde": "05166eeba4eeb772ccb21f829b26f15e9f172810028dc123fcc79f5b091e12ff",
+      "sauvegarde_relative": "optimisation/poumons_v4/modeles_v4/CNN_classique/graine_42/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v4 recadrage poumons",
+      "modele": "CNN_classique",
+      "graine": 123,
+      "epoque": 9,
+      "sha256_sauvegarde": "4c96725828663b35d054c1e1fd607fdea757476df302e8a17a667ba3cc4cc662",
+      "sauvegarde_relative": "optimisation/poumons_v4/modeles_v4/CNN_classique/graine_123/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v4 recadrage poumons",
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "epoque": 17,
+      "sha256_sauvegarde": "a452564f222056d7d47a4139c49f54563523d9d58f08390c2f117a5832f2468b",
+      "sauvegarde_relative": "optimisation/poumons_v4/modeles_v4/CNN_classique/graine_2026/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v4 recadrage poumons",
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "epoque": 13,
+      "sha256_sauvegarde": "a861cc4466c8858cae9da54b1ca886063734d5941c3995522191e4c24b0f9349",
+      "sauvegarde_relative": "optimisation/poumons_v4/modeles_v4/CNN_CBAM/graine_42/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v4 recadrage poumons",
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "epoque": 13,
+      "sha256_sauvegarde": "a12d6a6418652e1a0d6e8240f54968d84e168a08be774b69b8e5f61e8d5dbab2",
+      "sauvegarde_relative": "optimisation/poumons_v4/modeles_v4/CNN_CBAM/graine_123/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v4 recadrage poumons",
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "epoque": 7,
+      "sha256_sauvegarde": "ebced10e49498bcb17d2966aee6fc2cd39121da8cf6b216d6dec9a74a31f12df",
+      "sauvegarde_relative": "optimisation/poumons_v4/modeles_v4/CNN_CBAM/graine_2026/configuration_03/meilleur.pt"
+    }
+  ],
+  "bilan": [
+    {
+      "prediction": "P5",
+      "cas_favorables": 6,
+      "verdict": "confirmée"
+    },
+    {
+      "prediction": "P5 sensibilité",
+      "cas_favorables": 2,
+      "verdict": "infirmée"
+    },
+    {
+      "prediction": "P6",
+      "cas_favorables": 6,
+      "verdict": "confirmée"
+    },
+    {
+      "prediction": "P6 sensibilité",
+      "cas_favorables": 6,
+      "verdict": "confirmée"
+    },
+    {
+      "prediction": "P7",
+      "cas_favorables": 6,
+      "verdict": "confirmée"
+    },
+    {
+      "prediction": "P8",
+      "cas_favorables": 5,
+      "verdict": "partielle"
+    }
+  ],
+  "test_exploratoire": {
+    "v4_moins_v3_f1_macro": {
+      "estimation": 0.144619766981,
+      "ic95": [
+        0.116151434541,
+        0.173227998567
+      ]
+    },
+    "v4_moins_v3_specificite_points": {
+      "estimation": 27.777777777700003,
+      "ic95": [
+        22.897801362,
+        32.6055312955
+      ]
+    },
+    "CBAM_moins_classique_v4_f1_macro": {
+      "estimation": -0.006706426964,
+      "ic95": [
+        -0.020705828969,
+        0.006466310941
+      ]
+    }
+  }
+}

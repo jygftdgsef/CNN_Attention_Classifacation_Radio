@@ -1,0 +1,154 @@
+{
+  "version_analyse": "cartes_attention_v1",
+  "ensemble": "val",
+  "effectif": 953,
+  "conditions": [
+    {
+      "id": "originale",
+      "type": "identite",
+      "valeur": 0.0,
+      "libelle": "Originale"
+    },
+    {
+      "id": "luminosite_090",
+      "type": "luminosite",
+      "valeur": 0.9,
+      "libelle": "Luminosité × 0,90"
+    },
+    {
+      "id": "luminosite_080",
+      "type": "luminosite",
+      "valeur": 0.8,
+      "libelle": "Luminosité × 0,80"
+    }
+  ],
+  "lot": 16,
+  "taille": 224,
+  "bande_bords": 0.15,
+  "couche_gradcam": {
+    "CNN_classique": "sortie de bloc3 (64x28x28)",
+    "CNN_CBAM": "sortie du module CBAM residuel (64x28x28)"
+  },
+  "score_gradcam": "logit PNEUMONIA - logit NORMAL; poids = moyenne spatiale du gradient; carte signee = somme ponderee des activations",
+  "cartes": {
+    "pneumonie": "ReLU(carte signee)",
+    "normale": "ReLU(-carte signee)",
+    "decision": "carte de la classe predite (argmax des logits, NORMAL en cas d egalite)"
+  },
+  "agrandissement": "ReLU a 28x28 puis interpolation bilineaire vers 224x224, align_corners=False",
+  "attention_spatiale": "sigmoide de la convolution du module spatial du CBAM (28x28)",
+  "regions": "padding ajoute; bords = bande de 15% de chaque cote du rectangle image; centre = reste du rectangle",
+  "correlation": "Pearson entre cartes signees 28x28, condition perturbee contre originale",
+  "cartes_moyennes": "cartes de decision normalisees a un maximum de 1 par image; attention brute; moyennes par classe vraie",
+  "sha256_protocole_10": "4afe32ecf001cb327b0e312fc1cf3855066b315d8bd5588d42ff9b635be5c9da",
+  "sha256_val_csv": "5cbe140b6eeab5c66be29bf7cf6387e2846d308a80076cd50447c5be2fe5eede",
+  "sha256_images_preparees_et_masques": "f19a40fb43e0d74d6640d17afa5094a56a2b9a1f62b5d638744dbb58d68c3e54",
+  "modeles": [
+    {
+      "variante": "sans",
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "epoque": 20,
+      "sha256_sauvegarde": "502a6020c3ddce3e1d1383222231d3e39098127daf94cd8e61a62097303eb6d9",
+      "sauvegarde_relative": "optimisation/cnn_cbam_grille_v2_residuel/configuration_03/meilleur.pt"
+    },
+    {
+      "variante": "sans",
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "epoque": 14,
+      "sha256_sauvegarde": "eb475ab86cf6b1633fd9c39188f531589c251d2207c533ef2d575d088d7a776c",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v2/CNN_CBAM/graine_123/configuration_03/meilleur.pt"
+    },
+    {
+      "variante": "sans",
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "epoque": 10,
+      "sha256_sauvegarde": "c3d6002a0fbb33cb53204f2e5f1336e108f3fcf1ad85e8b57c0634ad40f8c6be",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v2/CNN_CBAM/graine_2026/configuration_03/meilleur.pt"
+    },
+    {
+      "variante": "sans",
+      "modele": "CNN_classique",
+      "graine": 42,
+      "epoque": 19,
+      "sha256_sauvegarde": "49d7518b9118082fabb3c447d9bf4deab541fe82d172f64017f66853c190da2a",
+      "sauvegarde_relative": "optimisation/cnn_classique_grille_v1/configuration_02/meilleur.pt"
+    },
+    {
+      "variante": "sans",
+      "modele": "CNN_classique",
+      "graine": 123,
+      "epoque": 18,
+      "sha256_sauvegarde": "a88f5a3424921d7fee2821fde1a8e7c94a16dd88b32a9ed3e03e1d1bbae9681a",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v2/CNN_classique/graine_123/configuration_02/meilleur.pt"
+    },
+    {
+      "variante": "sans",
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "epoque": 8,
+      "sha256_sauvegarde": "63bfa2423b682f3bc8d0565fe8add5dc325edfb5b4e1038787ad90462391c7cd",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v2/CNN_classique/graine_2026/configuration_02/meilleur.pt"
+    },
+    {
+      "variante": "avec",
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "epoque": 11,
+      "sha256_sauvegarde": "ab944419eeca95a5969d755a6ec085b65f3bb9b5e0948c184f35934c5a60de78",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_CBAM/graine_42/configuration_03/meilleur.pt"
+    },
+    {
+      "variante": "avec",
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "epoque": 12,
+      "sha256_sauvegarde": "0f96779663f1a5d81a07ee80a7ef9a594bada3ee5b4720679fbd7caa02d947c8",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_CBAM/graine_123/configuration_03/meilleur.pt"
+    },
+    {
+      "variante": "avec",
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "epoque": 12,
+      "sha256_sauvegarde": "a591e0dd5acef5bb1b486dd7431f9dc51bba96390681b7090cac08a1a4a89660",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_CBAM/graine_2026/configuration_03/meilleur.pt"
+    },
+    {
+      "variante": "avec",
+      "modele": "CNN_classique",
+      "graine": 42,
+      "epoque": 6,
+      "sha256_sauvegarde": "cafb38ef2cc6a20632a81bc7cde092217c689753853eed8c83bc2b6686ab8553",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_classique/graine_42/configuration_02/meilleur.pt"
+    },
+    {
+      "variante": "avec",
+      "modele": "CNN_classique",
+      "graine": 123,
+      "epoque": 18,
+      "sha256_sauvegarde": "6f69f85e0e7d2d62237606791282f9e634d6267cd334156f234bc01928f99952",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_classique/graine_123/configuration_02/meilleur.pt"
+    },
+    {
+      "variante": "avec",
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "epoque": 18,
+      "sha256_sauvegarde": "fee2d815df3bcefa13e9178aaef0f277685f0a03a322dc2dd125e1b544947fd3",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_classique/graine_2026/configuration_02/meilleur.pt"
+    }
+  ],
+  "versions": {
+    "python": "3.11.16 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:36:16) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pillow": "12.3.0",
+    "sklearn": "1.9.1"
+  },
+  "threads_torch": 4,
+  "limite": "Validation deja utilisee pour la selection; Grad-CAM approximation locale a 28x28; centre = approximation du thorax, pas une segmentation des poumons; aucune donnee de test."
+}

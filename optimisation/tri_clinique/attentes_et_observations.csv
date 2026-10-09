@@ -1,0 +1,5 @@
+﻿systeme,A1_NORMAL_en_rouge_seuils_developpement_pct (attente > 20),A2_NORMAL_en_rouge_calibration_locale_mediane_pct (attente 7 à 14),A2_PNEUMONIA_en_vert_calibration_locale_mediane_pct (attente 1 à 5),A3_largeur_intervalle_PNEUMONIA_en_vert_25pct_vs_100pct (points),A4_erreurs_graves_pour_100_alertees_vs_non_alertees
+"CNN classique, v3 sans raccourci",69.696969696969703,10.256410256410255,2.0100502512562812,11.8 vs 6.5,2.3 vs 5.8
+"CNN + CBAM, v3 sans raccourci",73.160173160173159,10.16949152542373,2.0100502512562812,12.1 vs 6.3,0.7 vs 6.0
+"CNN classique, v4 recadrage poumons",41.99134199134199,10.256410256410255,1.9656138317395924,10.7 vs 6.0,3.3 vs 5.5
+"CNN + CBAM, v4 recadrage poumons",43.722943722943725,10.212950890916993,1.9801980198019802,11.8 vs 5.9,0.2 vs 5.9

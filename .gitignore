@@ -1,0 +1,15 @@
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+.env
+data/
+datasets/
+*.pt
+*.pth
+*.h5
+*.zip
+
+# Archives locales et masques generes
+/archive/
+/optimisation/poumons_v4/masques/

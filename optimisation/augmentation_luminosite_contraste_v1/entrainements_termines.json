@@ -1,0 +1,9 @@
+{
+  "essais_termines": 6,
+  "graines": [
+    42,
+    123,
+    2026
+  ],
+  "robustesse_reste_a_evaluer": true
+}

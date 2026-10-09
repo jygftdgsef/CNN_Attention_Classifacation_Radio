@@ -1,0 +1,7 @@
+﻿prediction,enonce,cas_favorables,cas,verdict,regle,resultats_v4_fragiles
+P5,"Pour les décisions PNEUMONIA correctes, l'enrichissement pulmonaire de chacun des 6 modèles v4 est supérieur à 1 (carte plus concentrée dans les poumons qu'une carte uniforme).",6,6,confirmée,confirmée si 6 cas favorables sur 6 ; partielle si 4 ou 5 ; infirmée sinon,False
+P5 sensibilité,"Même prédiction que P5, avec la zone pulmonaire élargie de 8 pixels.",2,6,infirmée,confirmée si 6 cas favorables sur 6 ; partielle si 4 ou 5 ; infirmée sinon,False
+P6,"Pour les décisions PNEUMONIA correctes, la concentration pulmonaire est plus élevée en v4 qu'en v3, à architecture et graine égales.",6,6,confirmée,confirmée si 6 cas favorables sur 6 ; partielle si 4 ou 5 ; infirmée sinon,False
+P6 sensibilité,"Même comparaison que P6, avec la zone pulmonaire élargie de 8 pixels.",6,6,confirmée,confirmée si 6 cas favorables sur 6 ; partielle si 4 ou 5 ; infirmée sinon,False
+P7,"Parmi les radios PNEUMONIA, la dépendance du score au format d'origine (|ρ| de Spearman) est plus faible en v4 qu'en v3, à architecture et graine égales.",6,6,confirmée,confirmée si 6 cas favorables sur 6 ; partielle si 4 ou 5 ; infirmée sinon,False
+P8,"Le recadrage coûte au plus 0,02 de F1 macro de validation : F1(v4) ≥ F1(v3) − 0,02, à architecture et graine égales.",5,6,partielle,confirmée si 6 cas favorables sur 6 ; partielle si 4 ou 5 ; infirmée sinon,False

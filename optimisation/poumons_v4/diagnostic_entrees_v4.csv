@@ -1,0 +1,10 @@
+﻿variable,description,auc_separation_train,valeurs_plus_elevees_chez_train,auc_separation_val,valeurs_plus_elevees_chez_val
+moyenne,intensité moyenne de l'entrée v4,0.75488026229249117,NORMAL,0.72755385986651877,NORMAL
+ecart_type,contraste de l'entrée v4,0.74691131585965609,NORMAL,0.74863040500880451,NORMAL
+nettete,netteté de l'entrée v4,0.79290429464444157,NORMAL,0.80492510706754494,NORMAL
+recadrage_largeur_relative,largeur de la boîte (part de l'image),0.61376844840135714,NORMAL,0.64214982934411613,NORMAL
+recadrage_hauteur_relative,hauteur de la boîte (part de l'image),0.78734869935172802,PNEUMONIA,0.78271538511706762,PNEUMONIA
+recadrage_rapport,proportions de la boîte (largeur/hauteur en pixels),0.66230914668767515,PNEUMONIA,0.67488423661383945,PNEUMONIA
+aire_poumons,surface des poumons (part de l'image),0.57067452236219918,PNEUMONIA,0.55068316702537012,PNEUMONIA
+repli_image_entiere,repli sur l'image entière (masque invalide),0.50569643513414186,PNEUMONIA,0.50950292397660824,PNEUMONIA
+rapport_largeur_hauteur,"format d'origine (métadonnée, rappel)",0.86311627648751221,PNEUMONIA,0.88666601447857551,PNEUMONIA

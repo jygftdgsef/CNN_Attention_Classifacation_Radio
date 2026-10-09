@@ -1,0 +1,16 @@
+{
+  "modele": "CNNClassique",
+  "critere_selection": "maximum du F1 macro de validation",
+  "epoque_retenue": 6,
+  "nombre_epoques_executees": 10,
+  "sauvegarde_source": "epoque_6.pt",
+  "sauvegarde_retenue": "meilleur_cnn_classique.pt",
+  "mesures_validation": {
+    "val_perte": 0.1251713292523961,
+    "val_exactitude": 0.9580272822665268,
+    "val_precision_pneumonie": 0.9777448071216616,
+    "val_rappel_pneumonie": 0.9634502923976608,
+    "val_f1_pneumonie": 0.9705449189985272,
+    "val_f1_macro": 0.9487761091343
+  }
+}

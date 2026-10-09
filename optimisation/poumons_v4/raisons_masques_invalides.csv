@@ -1,0 +1,6 @@
+﻿ensemble,classe,raison_invalide,radios
+train,PNEUMONIA,poumon gauche absent ou trop petit,22
+train,PNEUMONIA,poumon droit absent ou trop petit,5
+train,PNEUMONIA,poumon droit absent ou trop petit ; poumon gauche absent ou trop petit,4
+val,PNEUMONIA,poumon gauche absent ou trop petit,11
+val,PNEUMONIA,poumon droit absent ou trop petit ; poumon gauche absent ou trop petit,2

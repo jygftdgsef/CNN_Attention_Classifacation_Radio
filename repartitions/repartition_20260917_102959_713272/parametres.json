@@ -1,0 +1,14 @@
+{
+  "graine_aleatoire": 42,
+  "fraction_validation_par_groupes": 0.2,
+  "regroupement": "Identifiants présumés extraits des noms, reliés par les doublons exacts de pixels après conversion RGB.",
+  "limite": "Identité clinique des patients non vérifiée.",
+  "politique_test": "Test original dédupliqué ; exclusion hors test des groupes également présents dans le test.",
+  "effectifs": {
+    "train": 3800,
+    "val": 953,
+    "test": 618
+  },
+  "images_exclues_par_precaution": 453,
+  "version_python": "3.11.16 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:36:16) [MSC v.1942 64 bit (AMD64)]"
+}

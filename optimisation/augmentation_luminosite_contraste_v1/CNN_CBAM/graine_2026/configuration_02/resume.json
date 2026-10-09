@@ -1,0 +1,20 @@
+{
+  "modele": "CNN_CBAM",
+  "graine": 2026,
+  "augmentation": "luminosite_contraste_v1",
+  "indice": 2,
+  "lr": 0.001,
+  "dropout": 0.5,
+  "epoque_retenue": 8,
+  "epoque_finale": 12,
+  "arret": "patience",
+  "duree_minutes": 33.578818150000004,
+  "sauvegarde": "C:\\Users\\David KUNYIMA\\OneDrive\\Desktop\\Memoire_CNN_Attention\\optimisation\\augmentation_luminosite_contraste_v1\\CNN_CBAM\\graine_2026\\configuration_02\\meilleur.pt",
+  "val_perte": 0.1418382875133488,
+  "val_exactitude": 0.9559286463798531,
+  "val_precision_pneumonie": 0.9762611275964391,
+  "val_rappel_pneumonie": 0.9619883040935673,
+  "val_specificite_NORMAL": 0.9405204460966543,
+  "val_f1_pneumonie": 0.9690721649484536,
+  "val_f1_macro": 0.9462149145910151
+}

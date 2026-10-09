@@ -1,0 +1,16 @@
+﻿chemin_relatif,classe_classique,vraie_etiquette_classique,prediction_classique,probabilite_pneumonie_classique,prediction_correcte_classique,classe_cbam,vraie_etiquette_cbam,prediction_cbam,probabilite_pneumonie_cbam,prediction_correcte_cbam,groupe_analyse
+test/NORMAL/NORMAL2-IM-0283-0001.jpeg,NORMAL,0,1,0.9547778964042664,False,NORMAL,0,1,0.935598611831665,False,faux_positifs_communs
+test/NORMAL/IM-0007-0001.jpeg,NORMAL,0,1,0.7518289089202881,False,NORMAL,0,1,0.7757799625396729,False,faux_positifs_communs
+test/NORMAL/NORMAL2-IM-0052-0001.jpeg,NORMAL,0,1,0.743215024471283,False,NORMAL,0,1,0.626092791557312,False,faux_positifs_communs
+test/PNEUMONIA/person119_bacteria_567.jpeg,PNEUMONIA,1,0,0.1871532052755355,False,PNEUMONIA,1,0,0.1333552449941635,False,faux_negatifs_communs
+test/PNEUMONIA/person1608_virus_2786.jpeg,PNEUMONIA,1,0,0.3265851438045501,False,PNEUMONIA,1,0,0.3979440629482269,False,faux_negatifs_communs
+test/PNEUMONIA/person119_bacteria_568.jpeg,PNEUMONIA,1,0,0.2871754765510559,False,PNEUMONIA,1,0,0.1383336633443832,False,faux_negatifs_communs
+test/NORMAL/IM-0030-0001.jpeg,NORMAL,0,0,0.4954491555690765,True,NORMAL,0,1,0.5344645977020264,False,erreurs_cbam_seulement
+test/NORMAL/NORMAL2-IM-0150-0001.jpeg,NORMAL,0,0,0.2823070883750915,True,NORMAL,0,1,0.7786048650741577,False,erreurs_cbam_seulement
+test/NORMAL/NORMAL2-IM-0079-0001.jpeg,NORMAL,0,0,0.4192693829536438,True,NORMAL,0,1,0.5944425463676453,False,erreurs_cbam_seulement
+test/NORMAL/IM-0013-0001.jpeg,NORMAL,0,1,0.707065224647522,False,NORMAL,0,0,0.4034112095832824,True,erreurs_classique_seulement
+test/NORMAL/IM-0039-0001.jpeg,NORMAL,0,1,0.6513774394989014,False,NORMAL,0,0,0.4727756381034851,True,erreurs_classique_seulement
+test/PNEUMONIA/person138_bacteria_658.jpeg,PNEUMONIA,1,0,0.4903598129749298,False,PNEUMONIA,1,1,0.9649367332458496,True,erreurs_classique_seulement
+test/NORMAL/NORMAL2-IM-0107-0001.jpeg,NORMAL,0,0,0.1229872182011604,True,NORMAL,0,0,0.1181792169809341,True,normales_correctes
+test/NORMAL/NORMAL2-IM-0007-0001.jpeg,NORMAL,0,0,0.0285953935235738,True,NORMAL,0,0,0.0116585744544863,True,normales_correctes
+test/NORMAL/NORMAL2-IM-0281-0001.jpeg,NORMAL,0,0,0.1450688242912292,True,NORMAL,0,0,0.2035864740610122,True,normales_correctes

@@ -1,0 +1,8 @@
+{
+  "version": "caracteristiques_images_v1",
+  "sha256_train_csv": "99930a915b8f5f9d72183e83d8e793068d9ccea6099606d59ddf2a4af9de270b",
+  "sha256_val_csv": "5cbe140b6eeab5c66be29bf7cf6387e2846d308a80076cd50447c5be2fe5eede",
+  "taille": 224,
+  "bande_bords": 0.15,
+  "pretraitement": "L; ImageOps.pad 224 bilineaire noir centre; /255"
+}

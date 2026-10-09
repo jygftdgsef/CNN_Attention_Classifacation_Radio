@@ -1,0 +1,17 @@
+{
+  "indice": 4,
+  "lr": 0.0005,
+  "dropout": 0.5,
+  "epoque_retenue": 9,
+  "epoque_finale": 13,
+  "arret": "patience",
+  "duree_minutes": 80.8935887099981,
+  "sauvegarde": "C:\\Users\\David KUNYIMA\\OneDrive\\Desktop\\Memoire_CNN_Attention\\optimisation\\cnn_cbam_grille_v2_residuel\\configuration_04\\meilleur.pt",
+  "val_perte": 0.1386266815688977,
+  "val_exactitude": 0.9590766002098636,
+  "val_precision_pneumonie": 0.9777777777777777,
+  "val_rappel_pneumonie": 0.9649122807017544,
+  "val_specificite_NORMAL": 0.9442379182156134,
+  "val_f1_pneumonie": 0.9713024282560706,
+  "val_f1_macro": 0.950002219612496
+}

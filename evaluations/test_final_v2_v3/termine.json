@@ -1,0 +1,15 @@
+{
+  "id_protocole": "9e299d00151c05be430b56fe807dbb12b22399fb42d4dacf78a97579aed5246f",
+  "effectif": 618,
+  "patients": 426,
+  "verdicts": {
+    "H1 | v2 sans augmentation : CBAM − classique": "écart démontré, en faveur du classique",
+    "H1 | v2 avec augmentation : CBAM − classique": "pas d'écart démontré",
+    "H1 | v3 sans raccourci : CBAM − classique": "écart démontré, en faveur du CBAM",
+    "H2 | spécificité : v3 − v2 sans augmentation": "contredite",
+    "H3 | faux positifs : v2 avec − v2 sans augmentation": "partielle",
+    "H4 partie 1 | ρ format → score parmi les NORMAL, 12 modèles v2": "confirmée",
+    "H4 partie 2 | |ρ| : v3 − v2 sans augmentation": "confirmée"
+  },
+  "verdict_H4_ensemble": "confirmée"
+}

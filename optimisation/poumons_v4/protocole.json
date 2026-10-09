@@ -1,0 +1,253 @@
+{
+  "version_analyse": "poumons_v4",
+  "predictions_ecrites_le_28_09_2026": {
+    "P5": "Pour les décisions PNEUMONIA correctes, l'enrichissement pulmonaire de chacun des 6 modèles v4 est supérieur à 1 (carte plus concentrée dans les poumons qu'une carte uniforme).",
+    "P5 sensibilité": "Même prédiction que P5, avec la zone pulmonaire élargie de 8 pixels.",
+    "P6": "Pour les décisions PNEUMONIA correctes, la concentration pulmonaire est plus élevée en v4 qu'en v3, à architecture et graine égales.",
+    "P6 sensibilité": "Même comparaison que P6, avec la zone pulmonaire élargie de 8 pixels.",
+    "P7": "Parmi les radios PNEUMONIA, la dépendance du score au format d'origine (|ρ| de Spearman) est plus faible en v4 qu'en v3, à architecture et graine égales.",
+    "P8": "Le recadrage coûte au plus 0,02 de F1 macro de validation : F1(v4) ≥ F1(v3) − 0,02, à architecture et graine égales."
+  },
+  "regle_de_lecture": "confirmée si 6 cas favorables sur 6 ; partielle si 4 ou 5 ; infirmée sinon",
+  "amendement_29_09_2026": "avant tout lancement : P6 portee par la concentration pulmonaire (l'enrichissement est plafonne a 1/aire, plus bas en v4); arret de securite si moins de 50 % de masques valides dans une classe d'un ensemble",
+  "segmentation": {
+    "modele": "torchxrayvision.baseline_models.chestx_det.PSPNet (ChestX-Det, Lian et al. 2021)",
+    "poids": {
+      "fichier": "pspnet_chestxray_best_model_4.pth",
+      "octets": 272988989,
+      "sha256": "019b167eac6b729fc1bb92bbbc185fc1730aaa65819f4e3fe718186cadc044fc",
+      "url": "https://github.com/mlmed/torchxrayvision/releases/download/v1/pspnet_chestxray_best_model_4.pth"
+    },
+    "resolution": 512,
+    "entree": "L; ImageOps.pad 512x512 bilineaire noir centre; x/255*2048-1024",
+    "sortie": "sigmoide des canaux Right Lung et Left Lung; zone de l'image (hors padding) redimensionnee en 256x256 (bilineaire): geometrie de l'image entiere",
+    "seuil": 0.5,
+    "nettoyage": "par poumon : plus grande composante connexe (8-connexite), trous bouches",
+    "validite": {
+      "aire_min_par_poumon": 0.02,
+      "aire_max_deux_poumons": 0.7,
+      "ecart_min_centres": 0.1,
+      "lateralite": "ordre gauche/droite de la majorite des radios dont les deux poumons sont presents"
+    },
+    "paquets": 200,
+    "lot": 2,
+    "arret_securite_masques_valides_pct": 50.0,
+    "fragilite": "resultats v4 signales comme fragiles si moins de 90 % de masques valides dans une classe d'un ensemble"
+  },
+  "recadrage_v4": {
+    "marge": 0.1,
+    "boite": "boite des deux poumons nettoyes, agrandie de la marge (part de sa largeur et de sa hauteur, de chaque cote), limitee a l'image",
+    "masque_invalide": "image entiere : entree identique a v3"
+  },
+  "pretraitement_v4": "L; recadrage sur la boite des deux poumons (PSPNet ChestX-Det de torchxrayvision, seuil 0.5, plus grande composante et trous bouches par poumon, marge 10 %, image entiere si masque invalide); resize 224x224 bilineaire (etirement); ImageOps.equalize; /255; aucune augmentation",
+  "entrainement_v4": {
+    "comme": "notebook 12",
+    "configurations": {
+      "CNN_classique": {
+        "indice": 2,
+        "lr": 0.001,
+        "dropout": 0.5
+      },
+      "CNN_CBAM": {
+        "indice": 3,
+        "lr": 0.0005,
+        "dropout": 0.3
+      }
+    },
+    "graines": [
+      42,
+      123,
+      2026
+    ],
+    "lot": 16,
+    "max_epoques": 20,
+    "patience": 4,
+    "critere": "val_f1_macro"
+  },
+  "cartes": {
+    "methode": "Grad-CAM a la sortie de bloc3 (classique) ou du CBAM residuel (CBAM), 64x28x28; score logit PNEUMONIA - logit NORMAL; carte de decision = ReLU de la carte signee de la classe predite; agrandissement bilineaire 224x224",
+    "part_poumons": "masse dans la zone pulmonaire / masse totale de la carte (padding compris pour v2)",
+    "enrichissement": "part_poumons / part de surface de la zone pulmonaire dans l'entree 224x224; moyenne sur les radios",
+    "concentration": "(part_poumons - aire) / (1 - aire), aire = part de surface de la zone pulmonaire dans l'entree 224x224; 0 = carte uniforme, 1 = tout dans les poumons; sert a P6 et P6 sensibilite",
+    "sensibilite": "zone pulmonaire elargie de 8 pixels (dilatation carree), limitee a l'image",
+    "radios": "validation, masques valides seulement; decisions PNEUMONIA correctes pour P5 et P6",
+    "attention_CBAM": "moyenne de l'attention spatiale dans la zone pulmonaire et dans le reste de l'image"
+  },
+  "format": "rho de Spearman entre le rapport largeur/hauteur d'origine et le score (logit PNEUMONIA - logit NORMAL), radios PNEUMONIA de la validation",
+  "test_exploratoire": {
+    "statut": "exploratoire, sans verdict : test deja utilise au notebook 14",
+    "bootstrap": {
+      "tirages": 2000,
+      "graine": 20260928,
+      "comme": "notebook 14 (memes tirages par patient)"
+    },
+    "comparaisons": "v4 - v3 par architecture et pour les deux; CBAM - classique en v3 et en v4"
+  },
+  "sha256_csv": {
+    "train": "99930a915b8f5f9d72183e83d8e793068d9ccea6099606d59ddf2a4af9de270b",
+    "val": "5cbe140b6eeab5c66be29bf7cf6387e2846d308a80076cd50447c5be2fe5eede",
+    "test": "dd117e6916f76ff8624684e4bed3c6c4233dace4262eb89985af3d24c645c7f0"
+  },
+  "sha256_images_v2_val": "f19a40fb43e0d74d6640d17afa5094a56a2b9a1f62b5d638744dbb58d68c3e54",
+  "sha256_entrees_v3_val": "5e05538aea8308a26362c8c4a3165565fdb1896660ee5396d9091efdfc3ed432",
+  "sha256_entrees_v3_test": "48d5dcf849092e4a7db53f950e5efdb7b1f77294b88a982b1b42b7c814f7728a",
+  "id_protocole_notebook_14": "9e299d00151c05be430b56fe807dbb12b22399fb42d4dacf78a97579aed5246f",
+  "modeles_existants": [
+    {
+      "version": "v2 sans augmentation",
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "epoque": 20,
+      "sha256_sauvegarde": "502a6020c3ddce3e1d1383222231d3e39098127daf94cd8e61a62097303eb6d9",
+      "sauvegarde_relative": "optimisation/cnn_cbam_grille_v2_residuel/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v2 sans augmentation",
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "epoque": 14,
+      "sha256_sauvegarde": "eb475ab86cf6b1633fd9c39188f531589c251d2207c533ef2d575d088d7a776c",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v2/CNN_CBAM/graine_123/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v2 sans augmentation",
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "epoque": 10,
+      "sha256_sauvegarde": "c3d6002a0fbb33cb53204f2e5f1336e108f3fcf1ad85e8b57c0634ad40f8c6be",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v2/CNN_CBAM/graine_2026/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v2 sans augmentation",
+      "modele": "CNN_classique",
+      "graine": 42,
+      "epoque": 19,
+      "sha256_sauvegarde": "49d7518b9118082fabb3c447d9bf4deab541fe82d172f64017f66853c190da2a",
+      "sauvegarde_relative": "optimisation/cnn_classique_grille_v1/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v2 sans augmentation",
+      "modele": "CNN_classique",
+      "graine": 123,
+      "epoque": 18,
+      "sha256_sauvegarde": "a88f5a3424921d7fee2821fde1a8e7c94a16dd88b32a9ed3e03e1d1bbae9681a",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v2/CNN_classique/graine_123/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v2 sans augmentation",
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "epoque": 8,
+      "sha256_sauvegarde": "63bfa2423b682f3bc8d0565fe8add5dc325edfb5b4e1038787ad90462391c7cd",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v2/CNN_classique/graine_2026/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v2 avec augmentation",
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "epoque": 11,
+      "sha256_sauvegarde": "ab944419eeca95a5969d755a6ec085b65f3bb9b5e0948c184f35934c5a60de78",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_CBAM/graine_42/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v2 avec augmentation",
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "epoque": 12,
+      "sha256_sauvegarde": "0f96779663f1a5d81a07ee80a7ef9a594bada3ee5b4720679fbd7caa02d947c8",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_CBAM/graine_123/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v2 avec augmentation",
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "epoque": 12,
+      "sha256_sauvegarde": "a591e0dd5acef5bb1b486dd7431f9dc51bba96390681b7090cac08a1a4a89660",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_CBAM/graine_2026/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v2 avec augmentation",
+      "modele": "CNN_classique",
+      "graine": 42,
+      "epoque": 6,
+      "sha256_sauvegarde": "cafb38ef2cc6a20632a81bc7cde092217c689753853eed8c83bc2b6686ab8553",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_classique/graine_42/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v2 avec augmentation",
+      "modele": "CNN_classique",
+      "graine": 123,
+      "epoque": 18,
+      "sha256_sauvegarde": "6f69f85e0e7d2d62237606791282f9e634d6267cd334156f234bc01928f99952",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_classique/graine_123/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v2 avec augmentation",
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "epoque": 18,
+      "sha256_sauvegarde": "fee2d815df3bcefa13e9178aaef0f277685f0a03a322dc2dd125e1b544947fd3",
+      "sauvegarde_relative": "optimisation/augmentation_luminosite_contraste_v2/CNN_classique/graine_2026/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v3 sans raccourci",
+      "modele": "CNN_classique",
+      "graine": 42,
+      "epoque": 9,
+      "sha256_sauvegarde": "178442363ad771d242ab5f81e54bbc8593ca60679ca97f89cefc6790ee49dfc1",
+      "sauvegarde_relative": "optimisation/v3_sans_raccourci_format/CNN_classique/graine_42/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v3 sans raccourci",
+      "modele": "CNN_classique",
+      "graine": 123,
+      "epoque": 14,
+      "sha256_sauvegarde": "ed9400568e7165342646e86656f57f7c0002257d7f8ffc89e46b4a20554415b5",
+      "sauvegarde_relative": "optimisation/v3_sans_raccourci_format/CNN_classique/graine_123/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v3 sans raccourci",
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "epoque": 20,
+      "sha256_sauvegarde": "a1f84d00ec764e213292bcad043b78fa15be7f3db053ac6612d8c32f5c1611e1",
+      "sauvegarde_relative": "optimisation/v3_sans_raccourci_format/CNN_classique/graine_2026/configuration_02/meilleur.pt"
+    },
+    {
+      "version": "v3 sans raccourci",
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "epoque": 20,
+      "sha256_sauvegarde": "2ea41210ff0dfe72fb62882c4bef89f6d46814e16d2926e96a76ed018a65f88c",
+      "sauvegarde_relative": "optimisation/v3_sans_raccourci_format/CNN_CBAM/graine_42/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v3 sans raccourci",
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "epoque": 18,
+      "sha256_sauvegarde": "0774d0bc217837730d480418a22bd5f18323a4aae3afae0e8e68556fc56d710f",
+      "sauvegarde_relative": "optimisation/v3_sans_raccourci_format/CNN_CBAM/graine_123/configuration_03/meilleur.pt"
+    },
+    {
+      "version": "v3 sans raccourci",
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "epoque": 16,
+      "sha256_sauvegarde": "09a5cf80f7e8650b0aa5a0775ec5003f68802b56e9137787ac7665a7aa9e3151",
+      "sauvegarde_relative": "optimisation/v3_sans_raccourci_format/CNN_CBAM/graine_2026/configuration_03/meilleur.pt"
+    }
+  ],
+  "versions": {
+    "python": "3.11.16 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:36:16) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pillow": "12.3.0",
+    "sklearn": "1.9.1",
+    "scipy": "1.17.1",
+    "torchxrayvision": "1.5.5"
+  },
+  "threads_torch": 4,
+  "limite": "Segmenteur entraine sur des adultes; opacites denses parfois hors masque; nouveaux indices possibles lies au recadrage; reglages non reoptimises pour v4; validation deja utilisee pour choisir les epoques; test deja consulte (notebook 14)."
+}

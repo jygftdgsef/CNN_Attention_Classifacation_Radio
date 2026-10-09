@@ -1,0 +1,129 @@
+{
+  "version_analyse": "robustesse_validation_v1",
+  "ensemble": "val",
+  "effectif": 953,
+  "conditions": [
+    {
+      "id": "originale",
+      "type": "identite",
+      "valeur": 0.0,
+      "libelle": "Originale"
+    },
+    {
+      "id": "luminosite_090",
+      "type": "luminosite",
+      "valeur": 0.9,
+      "libelle": "Luminosité × 0,90"
+    },
+    {
+      "id": "luminosite_110",
+      "type": "luminosite",
+      "valeur": 1.1,
+      "libelle": "Luminosité × 1,10"
+    },
+    {
+      "id": "contraste_090",
+      "type": "contraste",
+      "valeur": 0.9,
+      "libelle": "Contraste × 0,90"
+    },
+    {
+      "id": "contraste_110",
+      "type": "contraste",
+      "valeur": 1.1,
+      "libelle": "Contraste × 1,10"
+    },
+    {
+      "id": "bruit_001",
+      "type": "bruit",
+      "valeur": 0.01,
+      "libelle": "Bruit σ = 0,01"
+    },
+    {
+      "id": "bruit_003",
+      "type": "bruit",
+      "valeur": 0.03,
+      "libelle": "Bruit σ = 0,03"
+    }
+  ],
+  "lot": 16,
+  "appareil": "cpu",
+  "classes": {
+    "NORMAL": 0,
+    "PNEUMONIA": 1
+  },
+  "pretraitement": "L; ImageOps.pad 224 bilineaire noir centre; /255; aucune augmentation",
+  "sha256_val_csv": "5cbe140b6eeab5c66be29bf7cf6387e2846d308a80076cd50447c5be2fe5eede",
+  "sha256_images_preparees_et_masques": "f19a40fb43e0d74d6640d17afa5094a56a2b9a1f62b5d638744dbb58d68c3e54",
+  "sha256_resultats_multigraines": "95a092ca31388097d6d88c17c9b38e3b4f29080a01d839b645863353d6a74b61",
+  "modeles": [
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "epoque": 14,
+      "architecture": "CNNAvecCBAM_89636_apres_bloc3_r16_k7_v1",
+      "sha256_sauvegarde": "b9782f910c3c0c33f8081bea82690cf101a46415029536af4d2f1dced38a81b2",
+      "sauvegarde_relative": "optimisation/cnn_cbam_grille_v1/configuration_02/meilleur.pt"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "epoque": 18,
+      "architecture": "CNNAvecCBAM_89636_apres_bloc3_r16_k7_v1",
+      "sha256_sauvegarde": "acd8afdab2c6dee51e713a3b9115eb8ad28d10a3e01b73061da47660322ea3a5",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v1/CNN_CBAM/graine_123/configuration_02/meilleur.pt"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "epoque": 7,
+      "architecture": "CNNAvecCBAM_89636_apres_bloc3_r16_k7_v1",
+      "sha256_sauvegarde": "8279fc9ab7737d182d88dbf1b858dafc828c9959252293c5c71570ec19541f10",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v1/CNN_CBAM/graine_2026/configuration_02/meilleur.pt"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "epoque": 19,
+      "architecture": "CNNClassique_89026_v1",
+      "sha256_sauvegarde": "49d7518b9118082fabb3c447d9bf4deab541fe82d172f64017f66853c190da2a",
+      "sauvegarde_relative": "optimisation/cnn_classique_grille_v1/configuration_02/meilleur.pt"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "epoque": 18,
+      "architecture": "CNNClassique_89026_v1",
+      "sha256_sauvegarde": "afcac25d033127daba886d75cf1b428b070e5a62ca0c7411e734ae9698bcc64c",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v1/CNN_classique/graine_123/configuration_02/meilleur.pt"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "epoque": 8,
+      "architecture": "CNNClassique_89026_v1",
+      "sha256_sauvegarde": "ecf6f88cd9df1c3755c5d42cd07d09d5e6a375481a4293864918196834b4921b",
+      "sauvegarde_relative": "optimisation/stabilite_multigraines_v1/CNN_classique/graine_2026/configuration_02/meilleur.pt"
+    }
+  ],
+  "versions": {
+    "python": "3.11.16 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:36:16) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pillow": "12.3.0",
+    "sklearn": "1.9.1"
+  },
+  "threads_torch": 4,
+  "bruit": {
+    "graine": 314159,
+    "generateur": "PCG64",
+    "cle": "SHA256(graine|chemin_relatif), 8 premiers octets little-endian",
+    "realisations_par_image": 1
+  },
+  "zone_perturbee": "rectangle image redimensionnee; padding ajoute preserve",
+  "contraste": "moyenne sur le rectangle image; float64 pour le calcul de cette moyenne",
+  "ecretage": "[0,1] apres transformation; retour float32",
+  "prediction": "argmax des 2 logits, NORMAL en cas d’egalite",
+  "limite": "Validation deja utilisee pour la selection; test deja consulte dans le projet; perturbations simulees; trois graines d’entrainement."
+}

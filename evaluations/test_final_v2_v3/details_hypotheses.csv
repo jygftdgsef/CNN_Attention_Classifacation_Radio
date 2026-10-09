@@ -1,0 +1,20 @@
+﻿hypothese,comparaison,mesure,unite,sens_predit,estimation,ic95_bas,ic95_haut,cas_dans_le_sens,cas,valeurs_par_cas
+H1 (secondaire),v2 sans augmentation : CBAM − classique,auc_roc,AUC,aucun,-0.0026548243599999999,-0.007909277466,0.0026666759759999999,2,3,-0.0128 ; -0.0053 ; +0.0102
+H1 (secondaire),v2 sans augmentation : CBAM − classique,rappel_pneumonie,points de %,aucun,1.8949181740000001,0.9591856540999999,2.9500309259000002,3,3,+2.5840 ; +1.2920 ; +1.8088
+H1 (secondaire),v2 sans augmentation : CBAM − classique,specificite_NORMAL,points de %,aucun,-11.9769119769,-14.9275362319,-9.2916185712000008,3,3,-16.0173 ; -17.3160 ; -2.5974
+H1 (secondaire),v2 avec augmentation : CBAM − classique,auc_roc,AUC,aucun,0.0032663288479999998,-0.001207947667,0.0079021343920000001,1,3,+0.0281 ; -0.0146 ; -0.0037
+H1 (secondaire),v2 avec augmentation : CBAM − classique,rappel_pneumonie,points de %,aucun,0.086132644300000005,-0.52631578950000002,0.7673620471,2,3,+1.0336 ; +1.0336 ; -1.8088
+H1 (secondaire),v2 avec augmentation : CBAM − classique,specificite_NORMAL,points de %,aucun,2.3088023087999998,0.28732548959999998,4.4353849094999998,1,3,-2.1645 ; -5.1948 ; +14.2857
+H1 (secondaire),v3 sans raccourci : CBAM − classique,auc_roc,AUC,aucun,0.0098996610619999995,0.0050363933330000001,0.015663539069000001,2,3,+0.0127 ; -0.0013 ; +0.0183
+H1 (secondaire),v3 sans raccourci : CBAM − classique,rappel_pneumonie,points de %,aucun,0.43066322130000001,0,0.94513344300000002,2,3,+0.7752 ; +0.5168 ; +0.0000
+H1 (secondaire),v3 sans raccourci : CBAM − classique,specificite_NORMAL,points de %,aucun,10.245310245300001,6.8115942028999994,13.960456089299999,3,3,+9.5238 ; +7.3593 ; +13.8528
+H2 (détail),CNN classique : spécificité v3 − v2 sans,specificite_NORMAL,points de %,positif,-17.748917748900002,-22.829524051,-12.716533180799999,0,3,-16.4502 ; -18.1818 ; -18.6147
+H3 (détail),CNN classique : faux positifs v2 avec − v2 sans,taux_faux_positifs_pct,points de %,négatif,3.0303030303030001,0.43473555430100003,5.8404558404560003,1,3,+0.8658 ; -0.4329 ; +8.6580
+H4 (détail),"CNN classique : ρ format → score, v2 sans augmentation",rho_format_score_NORMAL,ρ de Spearman,positif,0.50955950596099997,0.41399616881599999,0.59598778859000001,3,3,+0.4112 ; +0.5777 ; +0.5398
+H4 (détail),"CNN classique : ρ format → score, v2 avec augmentation",rho_format_score_NORMAL,ρ de Spearman,positif,0.56344068225599997,0.47349550166999999,0.64428169751999997,3,3,+0.7034 ; +0.4257 ; +0.5612
+H4 (détail),"CNN classique : ρ format → score, v3 sans raccourci",rho_format_score_NORMAL,ρ de Spearman,aucun,0.30823971131299999,0.18731407970799999,0.420614667424,3,3,+0.3551 ; +0.3098 ; +0.2598
+H2 (détail),CNN + CBAM : spécificité v3 − v2 sans,specificite_NORMAL,points de %,positif,4.4733044732999998,-0.28493085360000003,9.6045814520999997,2,3,+9.0909 ; +6.4935 ; -2.1645
+H3 (détail),CNN + CBAM : faux positifs v2 avec − v2 sans,taux_faux_positifs_pct,points de %,négatif,-11.255411255411,-14.057971014493001,-8.6199872286080002,3,3,-12.9870 ; -12.5541 ; -8.2251
+H4 (détail),"CNN + CBAM : ρ format → score, v2 sans augmentation",rho_format_score_NORMAL,ρ de Spearman,positif,0.46118466740699998,0.35935478208999999,0.55145869124199998,3,3,+0.3849 ; +0.5105 ; +0.4881
+H4 (détail),"CNN + CBAM : ρ format → score, v2 avec augmentation",rho_format_score_NORMAL,ρ de Spearman,positif,0.52688980185199996,0.43095546488999997,0.61485175795400004,3,3,+0.4348 ; +0.5504 ; +0.5955
+H4 (détail),"CNN + CBAM : ρ format → score, v3 sans raccourci",rho_format_score_NORMAL,ρ de Spearman,aucun,0.31941886199800001,0.201289347412,0.429763036737,3,3,+0.3197 ; +0.2863 ; +0.3522

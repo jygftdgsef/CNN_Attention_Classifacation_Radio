@@ -1,0 +1,34 @@
+{
+  "id_protocole": "dde79f1169c90057f6c78334a4839cdedabab635509275c61882dabdad13ad2b",
+  "lignes_bandes": 17154,
+  "lignes_cartes": 17154,
+  "ecart_cartes_v2_notebook_11": 2.220446049250313e-16,
+  "lignes_robustesse": 198,
+  "bilan": [
+    {
+      "prediction": "P1",
+      "cas_favorables": 6,
+      "verdict": "confirmée"
+    },
+    {
+      "prediction": "P2",
+      "cas_favorables": 0,
+      "verdict": "infirmée"
+    },
+    {
+      "prediction": "P3",
+      "cas_favorables": 6,
+      "verdict": "confirmée"
+    },
+    {
+      "prediction": "P3 sensibilité",
+      "cas_favorables": 6,
+      "verdict": "confirmée"
+    },
+    {
+      "prediction": "P4",
+      "cas_favorables": 6,
+      "verdict": "confirmée"
+    }
+  ]
+}

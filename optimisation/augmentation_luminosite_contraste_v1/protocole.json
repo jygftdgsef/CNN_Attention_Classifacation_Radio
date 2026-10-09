@@ -1,0 +1,110 @@
+{
+  "version": "augmentation_luminosite_contraste_v1",
+  "graines": [
+    42,
+    123,
+    2026
+  ],
+  "lr": 0.001,
+  "dropout": 0.5,
+  "lot": 16,
+  "max_epoques": 20,
+  "patience": 4,
+  "optimiseur": "Adam",
+  "weight_decay": 0.0,
+  "critere": "val_f1_macro",
+  "amelioration": "strictement superieure",
+  "classes": {
+    "NORMAL": 0,
+    "PNEUMONIA": 1
+  },
+  "poids_classes": [
+    1.7608897686004639,
+    0.698272705078125
+  ],
+  "sha256_csv": {
+    "train": "99930a915b8f5f9d72183e83d8e793068d9ccea6099606d59ddf2a4af9de270b",
+    "val": "5cbe140b6eeab5c66be29bf7cf6387e2846d308a80076cd50447c5be2fe5eede"
+  },
+  "sha256_tableau_reference": "95a092ca31388097d6d88c17c9b38e3b4f29080a01d839b645863353d6a74b61",
+  "pretraitement": "L; ImageOps.pad 224 bilineaire noir centre; /255",
+  "augmentation_train": {
+    "version": "luminosite_contraste_v1",
+    "luminosite": [
+      0.9,
+      1.1
+    ],
+    "contraste": [
+      0.9,
+      1.1
+    ],
+    "probabilite": 1.0,
+    "ordre": "aleatoire entre les deux ordres possibles",
+    "zone": "rectangle image redimensionnee, padding ajoute preserve",
+    "contraste_centre": "moyenne float64 du rectangle au moment de l’operation",
+    "ecretage": "[0,1] apres chaque operation; pixels float32",
+    "generateur": "numpy PCG64, SHA256(version|graine|epoque|chemin), 8 premiers octets little-endian"
+  },
+  "augmentation_validation": false,
+  "appareil": "cpu",
+  "versions": {
+    "python": "3.11.16 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:36:16) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pillow": "12.3.0",
+    "sklearn": "1.9.1"
+  },
+  "threads_torch": 4,
+  "origines": [
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "initialisation_relative": "optimisation/cnn_classique_grille_v1/configuration_02/epoque_000.pt",
+      "sha256_initialisation": "41000b6e68dc321973c856fdd78f41d6d6510d5b8ae07fd68b71ba03f8250281",
+      "reference_relative": "optimisation/cnn_classique_grille_v1/configuration_02/meilleur.pt",
+      "sha256_reference": "49d7518b9118082fabb3c447d9bf4deab541fe82d172f64017f66853c190da2a"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "initialisation_relative": "optimisation/stabilite_multigraines_v1/CNN_classique/graine_123/configuration_02/epoque_000.pt",
+      "sha256_initialisation": "20f6767e232a8fe189a7f38cc98c707f8673244697add0ca3c8cf6ba19d5f2eb",
+      "reference_relative": "optimisation/stabilite_multigraines_v1/CNN_classique/graine_123/configuration_02/meilleur.pt",
+      "sha256_reference": "afcac25d033127daba886d75cf1b428b070e5a62ca0c7411e734ae9698bcc64c"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "initialisation_relative": "optimisation/stabilite_multigraines_v1/CNN_classique/graine_2026/configuration_02/epoque_000.pt",
+      "sha256_initialisation": "69f88e9bc2b92dd2f8f9ed0652de57efe694e2447948a376ad437cd37eb20280",
+      "reference_relative": "optimisation/stabilite_multigraines_v1/CNN_classique/graine_2026/configuration_02/meilleur.pt",
+      "sha256_reference": "ecf6f88cd9df1c3755c5d42cd07d09d5e6a375481a4293864918196834b4921b"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "initialisation_relative": "optimisation/cnn_cbam_grille_v1/configuration_02/epoque_000.pt",
+      "sha256_initialisation": "d3d6bdebc2b7dbdd580a97aa78f06c8909e501c5b12d60644fc19beb3daa8116",
+      "reference_relative": "optimisation/cnn_cbam_grille_v1/configuration_02/meilleur.pt",
+      "sha256_reference": "b9782f910c3c0c33f8081bea82690cf101a46415029536af4d2f1dced38a81b2"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "initialisation_relative": "optimisation/stabilite_multigraines_v1/CNN_CBAM/graine_123/configuration_02/epoque_000.pt",
+      "sha256_initialisation": "a2142b193f431c65fb50aaa9dbcadda9cb4b252a14f531a8211284d864f17cd9",
+      "reference_relative": "optimisation/stabilite_multigraines_v1/CNN_CBAM/graine_123/configuration_02/meilleur.pt",
+      "sha256_reference": "acd8afdab2c6dee51e713a3b9115eb8ad28d10a3e01b73061da47660322ea3a5"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "initialisation_relative": "optimisation/stabilite_multigraines_v1/CNN_CBAM/graine_2026/configuration_02/epoque_000.pt",
+      "sha256_initialisation": "5e93d6bd3d4d60f8c3ffb9a92dc3215ccfb22e7fb09854a1009d1c0d86c42ac2",
+      "reference_relative": "optimisation/stabilite_multigraines_v1/CNN_CBAM/graine_2026/configuration_02/meilleur.pt",
+      "sha256_reference": "8279fc9ab7737d182d88dbf1b858dafc828c9959252293c5c71570ec19541f10"
+    }
+  ],
+  "limite": "Augmentation choisie apres observation de la robustesse sur validation; test deja consulte; analyse exploratoire."
+}

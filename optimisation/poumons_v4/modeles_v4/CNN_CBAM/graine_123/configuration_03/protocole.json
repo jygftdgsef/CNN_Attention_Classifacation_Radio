@@ -1,0 +1,48 @@
+{
+  "version": "v4_recadrage_poumons",
+  "architecture": "CNNAvecCBAM_89636_apres_bloc3_r16_k7_residuel_v2",
+  "graine": 123,
+  "lot": 16,
+  "max_epoques": 20,
+  "patience": 4,
+  "critere": "val_f1_macro",
+  "amelioration": "strictement superieure",
+  "grille": [
+    [
+      0.0005,
+      0.3
+    ]
+  ],
+  "optimiseur": "Adam",
+  "weight_decay": 0.0,
+  "pretraitement": "L; recadrage sur la boite des deux poumons (PSPNet ChestX-Det de torchxrayvision, seuil 0.5, plus grande composante et trous bouches par poumon, marge 10 %, image entiere si masque invalide); resize 224x224 bilineaire (etirement); ImageOps.equalize; /255; aucune augmentation",
+  "classes": {
+    "NORMAL": 0,
+    "PNEUMONIA": 1
+  },
+  "poids_classes": [
+    1.7608897686004639,
+    0.698272705078125
+  ],
+  "sha256_csv": {
+    "train": "99930a915b8f5f9d72183e83d8e793068d9ccea6099606d59ddf2a4af9de270b",
+    "val": "5cbe140b6eeab5c66be29bf7cf6387e2846d308a80076cd50447c5be2fe5eede"
+  },
+  "sha256_entrees_v4": {
+    "train": "c4aed5596f31b0b793e11b778d3f337d6d58f1d8763141d2cf849ef92808eca2",
+    "val": "2178fe334d85d20e8e23c8fe58cffd714c6befb6dd4b4fb19aad2dce71ce1191"
+  },
+  "id_protocole_notebook_16": "1af4b47d084f5fcbe157c5b734db5120f491dba1ec1ba8f4f1f37f79876eecac",
+  "versions": {
+    "python": "3.11.16 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:36:16) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pillow": "12.3.0",
+    "sklearn": "1.9.1",
+    "scipy": "1.17.1",
+    "torchxrayvision": "1.5.5"
+  },
+  "threads_torch": 4,
+  "limite": "Reglages choisis avec la preparation v2, non reoptimises; recadrage issu d'un segmenteur entraine sur des adultes; test deja consulte (notebook 14)."
+}

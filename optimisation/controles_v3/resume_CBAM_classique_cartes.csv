@@ -1,0 +1,13 @@
+﻿mesure,version,classe,mean,min,max,graines_CBAM_plus_central
+enrichissement_centre_image,v2 avec augmentation,NORMAL,0.11636869523720583,-0.10948904992744612,0.352649995230913,2
+enrichissement_centre_image,v2 avec augmentation,PNEUMONIA,0.13622370841294207,0.024420505198467612,0.25086418518302184,3
+enrichissement_centre_image,v2 sans augmentation,NORMAL,0.46204773626088241,0.23942015528031813,0.73614016957070749,3
+enrichissement_centre_image,v2 sans augmentation,PNEUMONIA,0.00064932619579490447,-0.064485426045486238,0.084286904465972423,1
+enrichissement_centre_image,v3 sans raccourci,NORMAL,0.068529374493798589,-0.65996071024715286,1.0389227169124449,1
+enrichissement_centre_image,v3 sans raccourci,PNEUMONIA,-0.082286072056063489,-0.13983416063564025,-0.053379126822926559,0
+enrichissement_centre_marge_exclue,v2 avec augmentation,NORMAL,0.059879374786127336,-0.0034492399288712505,0.1262100327926573,2
+enrichissement_centre_marge_exclue,v2 avec augmentation,PNEUMONIA,0.15534472141036429,0.068140698600856586,0.252514855410225,3
+enrichissement_centre_marge_exclue,v2 sans augmentation,NORMAL,0.29782347294166045,0.22883879688926345,0.40880530322036912,3
+enrichissement_centre_marge_exclue,v2 sans augmentation,PNEUMONIA,0.011517635088243402,-0.024835954037509933,0.076509437876495556,1
+enrichissement_centre_marge_exclue,v3 sans raccourci,NORMAL,0.085565560603793944,-0.30751556497695798,0.65789750806613501,1
+enrichissement_centre_marge_exclue,v3 sans raccourci,PNEUMONIA,-0.062970433545813373,-0.10943334308788755,-0.036181448823276452,0

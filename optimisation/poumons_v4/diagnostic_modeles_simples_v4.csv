@@ -1,0 +1,5 @@
+﻿informations_utilisees,auc_validation,f1_macro_validation
+"Intensité de l'entrée v4 (moyenne, écart-type, percentiles)",0.83739320420009133,0.7049354295870518
+Netteté de l'entrée v4,0.80492510706754494,0.70880172399929242
+"Géométrie du recadrage (taille et proportions de la boîte, surface des poumons, repli)",0.92524837496467316,0.8261486282729531
+"Format d'origine (métadonnées, rappel du notebook 12)",0.93527033196373832,0.83688519644530479

@@ -1,0 +1,17 @@
+{
+  "indice": 3,
+  "lr": 0.0005,
+  "dropout": 0.3,
+  "epoque_retenue": 13,
+  "epoque_finale": 17,
+  "arret": "patience",
+  "duree_minutes": 758.7768893300007,
+  "sauvegarde_relative": "optimisation/poumons_v4/modeles_v4/CNN_CBAM/graine_123/configuration_03/meilleur.pt",
+  "val_perte": 0.13797381534208447,
+  "val_exactitude": 0.9569779643231899,
+  "val_precision_pneumonie": 0.9707174231332357,
+  "val_rappel_pneumonie": 0.9692982456140351,
+  "val_specificite_NORMAL": 0.9256505576208178,
+  "val_f1_pneumonie": 0.9700073152889539,
+  "val_f1_macro": 0.9469702624682246
+}

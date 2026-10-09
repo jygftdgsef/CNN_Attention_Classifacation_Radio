@@ -1,0 +1,6 @@
+﻿prediction,enonce,cas_favorables,cas,verdict,regle
+P1,"Pour chacun des 6 modèles v2 sans augmentation, les bandes noires augmentent le score PNEUMONIA des radios NORMAL (effet du noir > 0).",6,6,confirmée,confirmée si 6 cas favorables sur 6 ; partielle si 4 ou 5 ; infirmée sinon
+P2,"L'effet du noir est plus faible, en valeur absolue, pour v3 que pour v2 sans augmentation (même architecture, même graine).",0,6,infirmée,confirmée si 6 cas favorables sur 6 ; partielle si 4 ou 5 ; infirmée sinon
+P3,"Pour les décisions PNEUMONIA correctes, l'enrichissement du centre est plus élevé pour v3 que pour v2 sans augmentation (même architecture, même graine).",6,6,confirmée,confirmée si 6 cas favorables sur 6 ; partielle si 4 ou 5 ; infirmée sinon
+P3 sensibilité,"Même comparaison que P3, en excluant une marge de 16 pixels au bord de l'image, pour v2 comme pour v3 (analyse de sensibilité).",6,6,confirmée,confirmée si 6 cas favorables sur 6 ; partielle si 4 ou 5 ; infirmée sinon
+P4,"Sur les 8 conditions de luminosité et de contraste, la variation moyenne du F1 macro est plus favorable pour v3 que pour v2 sans augmentation (même architecture, même graine).",6,6,confirmée,confirmée si 6 cas favorables sur 6 ; partielle si 4 ou 5 ; infirmée sinon

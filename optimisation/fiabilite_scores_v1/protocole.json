@@ -1,0 +1,803 @@
+{
+  "version": "fiabilite_scores_v1",
+  "ensemble": "val",
+  "n_images": 953,
+  "classes": {
+    "NORMAL": 0,
+    "PNEUMONIA": 1
+  },
+  "sha256_val_csv": "5cbe140b6eeab5c66be29bf7cf6387e2846d308a80076cd50447c5be2fe5eede",
+  "sha256_comparaison_robustesse": "ae29215c2bc05c93197c15c161f1afa7c46b244a0497f9a48e01963ac3da4cf7",
+  "protocoles_predictions": {
+    "sans": "0704e28f75442c6b0e9779bca126d29e658d80ce1f219b60dbd427097c25a92c",
+    "avec": "3ee20c259ce36da86d332d71dbf43e2c6c115555348ff21bc9e9572fa2a04052"
+  },
+  "predictions": [
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "originale",
+      "augmentation": "sans",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_42__originale.csv",
+      "sha256": "a367824cd5569c0fc4c8f7d768e9e0c721f2da242d9a714ebac9f4baa1563589"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "luminosite_090",
+      "augmentation": "sans",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_42__luminosite_090.csv",
+      "sha256": "c342f932ead05a23d41838dbebc670280df429b6c2aa9f13b83fb6e327535317"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "luminosite_110",
+      "augmentation": "sans",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_42__luminosite_110.csv",
+      "sha256": "1fcf08f76d448c29a853f857019f9735d5b0d4abeecd117e0de82164c4e72d6b"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "contraste_090",
+      "augmentation": "sans",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_42__contraste_090.csv",
+      "sha256": "80af4d27f8c9cae28f875d4e31d1e419de659593a89a7e3607033bda72ccdb83"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "contraste_110",
+      "augmentation": "sans",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_42__contraste_110.csv",
+      "sha256": "594572442f221ec40f1e5f071708398941d8ea4750cc28af74dd782605e63acb"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "bruit_001",
+      "augmentation": "sans",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_42__bruit_001.csv",
+      "sha256": "64b09cc46ebf38d10e1daca22d0159e72368e913e1e4b5fa9d270edffeb2d055"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "bruit_003",
+      "augmentation": "sans",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_42__bruit_003.csv",
+      "sha256": "ac0ffc093e4c573bb102edb2b6f68fb94c8ca7f764946764afc046f6d7171b0f"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "originale",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_123__originale.csv",
+      "sha256": "39a1a0e46c37aa5bd2816c8206890ac98ce1374e045de05028c2cc6a3da615f0"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "luminosite_090",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_123__luminosite_090.csv",
+      "sha256": "cd7a30bfb1b559468bb5440f2de15d723e70293b107155870805601c22f66566"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "luminosite_110",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_123__luminosite_110.csv",
+      "sha256": "58bb93512fae9474d9436cbebb9de1d0ae95dc67d3a54ec5afcfa27eb1ac5186"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "contraste_090",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_123__contraste_090.csv",
+      "sha256": "2b8315b94ac8bbdbdd70d89255ebf64897e6332744032c484817270dd003d754"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "contraste_110",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_123__contraste_110.csv",
+      "sha256": "4636fd8826635377ee058adcfd6ce32ea3e12e446123154fb86e7f7a9ee14a23"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "bruit_001",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_123__bruit_001.csv",
+      "sha256": "1249aac9df45bc12a3f4906d2748024564597b554883c0de7f624f9a7d8ba351"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "bruit_003",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_123__bruit_003.csv",
+      "sha256": "d4b5fce3672b588d24a69d733717825eadcb8784672395f9a1c2f79849476ad5"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "originale",
+      "augmentation": "sans",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_2026__originale.csv",
+      "sha256": "03ea469de9bbb7ac1cc3ee40b3b77b4916057c27475591c6f204b6a3021cafba"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "luminosite_090",
+      "augmentation": "sans",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_2026__luminosite_090.csv",
+      "sha256": "5dcf570e8589daf4c5ef7d87fcc435e619a851fc8daaffb217de525bac5a9784"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "luminosite_110",
+      "augmentation": "sans",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_2026__luminosite_110.csv",
+      "sha256": "fd5a0196f9da33d04d540ec222348aa3e2aa6769ae7859ebd64e28ba2d163f04"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "contraste_090",
+      "augmentation": "sans",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_2026__contraste_090.csv",
+      "sha256": "d87ce299651a599a3982aa769d2930d44d30a3cfcc8994fbfd50229fc080102a"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "contraste_110",
+      "augmentation": "sans",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_2026__contraste_110.csv",
+      "sha256": "ee4afef2d44ae010c81c8e041e6cbb8e7032115b615bc32b2cd49bffe049069f"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "bruit_001",
+      "augmentation": "sans",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_2026__bruit_001.csv",
+      "sha256": "6dea4737fe9c5f46eff94971c9f51a73b399ff61792b6063f86de0adcd1044fc"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "bruit_003",
+      "augmentation": "sans",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_classique_graine_2026__bruit_003.csv",
+      "sha256": "bc92f404070247f495cd9432c3fb2de70f15122009d157826b41709c4ef81e29"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "originale",
+      "augmentation": "sans",
+      "epoque": 14,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_42__originale.csv",
+      "sha256": "59f3d6e411ec879101dd3a732568d54e668bcc159b635ba2da5c3162525026c6"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "luminosite_090",
+      "augmentation": "sans",
+      "epoque": 14,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_42__luminosite_090.csv",
+      "sha256": "f07d001d9758932677bccf061533dd7a9753d75892253b1ef69729029841255d"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "luminosite_110",
+      "augmentation": "sans",
+      "epoque": 14,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_42__luminosite_110.csv",
+      "sha256": "1692c76f051e134b46bcf57eb8135afd7ecb8f8727dae10f047b6c5674e3ca57"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "contraste_090",
+      "augmentation": "sans",
+      "epoque": 14,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_42__contraste_090.csv",
+      "sha256": "9a592906b3113cdda350e7c727cf54ab596118e25848e60266defa37745b3a89"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "contraste_110",
+      "augmentation": "sans",
+      "epoque": 14,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_42__contraste_110.csv",
+      "sha256": "2a8ad34cb28e29a58958f9edb458e0350055f4ea35494d39b8f4df1eb3aee6bf"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "bruit_001",
+      "augmentation": "sans",
+      "epoque": 14,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_42__bruit_001.csv",
+      "sha256": "5a4282957a5c7ada618846dfacae5db41c5d934ab659d36175fc5b439344f835"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "bruit_003",
+      "augmentation": "sans",
+      "epoque": 14,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_42__bruit_003.csv",
+      "sha256": "145d0d1bcada12f634de067cc824428c8c92a06d2c3d8c33497d7110a7ba02ba"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "originale",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_123__originale.csv",
+      "sha256": "430ff8e87883e185a40cb29ef658372163a25180196a71ad7dfa7964ab2c265b"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "luminosite_090",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_123__luminosite_090.csv",
+      "sha256": "2fe31517932f3ab89eaf61d0008b40d35d5ece325d7d610f5170333098f32057"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "luminosite_110",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_123__luminosite_110.csv",
+      "sha256": "60cacfe540b866ae773707546069dfc9c710148d733b6042ce9ececf6d4e3287"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "contraste_090",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_123__contraste_090.csv",
+      "sha256": "281a21764906ed6ed11563bb3f98dc507ab09b0cc2e431cb5a8bbf2360999e1f"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "contraste_110",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_123__contraste_110.csv",
+      "sha256": "d8c108b46bb71009589c810cd500e8b2a37bc52345ebc8e7edbc206679d3dbe3"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "bruit_001",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_123__bruit_001.csv",
+      "sha256": "871e61b9e51c028c32d5503b3bc529c8d51d98e0c3a4e26f8ded043b2f429f43"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "bruit_003",
+      "augmentation": "sans",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_123__bruit_003.csv",
+      "sha256": "06adae8f8faee00175422ce80496a6e768ca952ee044294ddce9f5d850609cb7"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "originale",
+      "augmentation": "sans",
+      "epoque": 7,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_2026__originale.csv",
+      "sha256": "b60e8ac8325e88faacdb2e95522bf8d857e60e436c7e148def7d211dc7b506d2"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "luminosite_090",
+      "augmentation": "sans",
+      "epoque": 7,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_2026__luminosite_090.csv",
+      "sha256": "15dfc1f34858cf8bea52a27622637cf086469eb01dd6c9dd2ee80592a56603d9"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "luminosite_110",
+      "augmentation": "sans",
+      "epoque": 7,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_2026__luminosite_110.csv",
+      "sha256": "09fffc23d86e0a307796a89b2eddfcb72647c682e5ffe1e32df1085a6b955af6"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "contraste_090",
+      "augmentation": "sans",
+      "epoque": 7,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_2026__contraste_090.csv",
+      "sha256": "b3aa0cd9df4b10d646b54b538aac0dab2bf9e6a4896702b6af8b6f3ed2bfb15a"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "contraste_110",
+      "augmentation": "sans",
+      "epoque": 7,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_2026__contraste_110.csv",
+      "sha256": "f52999a123dfb9075fdde15bf59076ad1c20d83609f0a9fb5c5ac91bb3b1cc40"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "bruit_001",
+      "augmentation": "sans",
+      "epoque": 7,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_2026__bruit_001.csv",
+      "sha256": "22ca4ce1f6bce8b9c62bac671e7f28424734013af9ad4d618a9eeebc486401c9"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "bruit_003",
+      "augmentation": "sans",
+      "epoque": 7,
+      "fichier_relatif": "optimisation/robustesse_validation_v1/predictions/CNN_CBAM_graine_2026__bruit_003.csv",
+      "sha256": "80e2bbec095b147df06262fa4e4d524096f63ca8295863983dfe49cf5f08bdf0"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "originale",
+      "augmentation": "avec",
+      "epoque": 6,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_42__originale.csv",
+      "sha256": "97fc8b02cddb06f3e977028957c095ce569dfb0c6856d9077dda51fe6521da06"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "luminosite_090",
+      "augmentation": "avec",
+      "epoque": 6,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_42__luminosite_090.csv",
+      "sha256": "25710183841484e7272c986ce8070b874d48276d6dacb3810e950ff327e71a8c"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "luminosite_110",
+      "augmentation": "avec",
+      "epoque": 6,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_42__luminosite_110.csv",
+      "sha256": "81ede61fee9c526fbaec557d0eeebc9cfd2766950ea928c4faf6a64e23b217ef"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "contraste_090",
+      "augmentation": "avec",
+      "epoque": 6,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_42__contraste_090.csv",
+      "sha256": "0299d42bb2b9410140b1439b58b688cbd6f671c22adb2f140169c3e49eeae0bb"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "contraste_110",
+      "augmentation": "avec",
+      "epoque": 6,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_42__contraste_110.csv",
+      "sha256": "0d894a6ceb352780bb970ce96cbed5a9812e26fa4c96851391d85731ca1a8612"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "bruit_001",
+      "augmentation": "avec",
+      "epoque": 6,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_42__bruit_001.csv",
+      "sha256": "20306086403d85d8187f652593c1bba1055a7e4054701472cd93a3ca627e3cca"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 42,
+      "condition": "bruit_003",
+      "augmentation": "avec",
+      "epoque": 6,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_42__bruit_003.csv",
+      "sha256": "89f7aba7426f31e7d24c41a8d9693557e88df5274473c8e6746cd81c8e94871c"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "originale",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_123__originale.csv",
+      "sha256": "025e09e7827c52f3b0528c2aab24016a9fc37160b3b3818b5fe8e62f8a23f8e1"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "luminosite_090",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_123__luminosite_090.csv",
+      "sha256": "4aa05aab877561ed3080535f061ac1cc38070090c955ce6090c77fb4e93f4551"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "luminosite_110",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_123__luminosite_110.csv",
+      "sha256": "e64083f64fd1b53db4bdd7d0360085769fbf8d499953b6ff8d790c5605aef90f"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "contraste_090",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_123__contraste_090.csv",
+      "sha256": "e5e737c2fe82f7ebe09e647747d0fa6c6d98f04c0a10e9ba231269519bdf4762"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "contraste_110",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_123__contraste_110.csv",
+      "sha256": "9ae4a370b8aca37389d1df7657e9141af1028a4b90bd7b6876407baae4aa8bae"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "bruit_001",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_123__bruit_001.csv",
+      "sha256": "7299189d4716b75fa67f846516d266ba6078643eda37272bec693c5174803c28"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 123,
+      "condition": "bruit_003",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_123__bruit_003.csv",
+      "sha256": "8cba466c9c7ac4bdd673a538a0970339f0f1ec1a0ece216a2a6fc4ced11a7b4f"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "originale",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_2026__originale.csv",
+      "sha256": "aacea7d21facb6326a8c6f9f51b5f6f979adb816f3801293b3c44ca0c3db902b"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "luminosite_090",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_2026__luminosite_090.csv",
+      "sha256": "fa03204dfbfc599507c3be0cb2969e7c4e1e3cee10e26e14660b83a5a399cfc6"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "luminosite_110",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_2026__luminosite_110.csv",
+      "sha256": "56986af1ae49050b981be9cd287995843a88d62fd65a3b712b0c4d8d76c2b00a"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "contraste_090",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_2026__contraste_090.csv",
+      "sha256": "f445392d1d2ea24040abdc44dde112107c39de5d7ace2fd96d67854256ee03a0"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "contraste_110",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_2026__contraste_110.csv",
+      "sha256": "302a7ed3665eb4461ce53b824fa7c37eb1d3a9e085bd6a8fe57b39bd7f3d028d"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "bruit_001",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_2026__bruit_001.csv",
+      "sha256": "a8ecb57239cf48be367022d85b0d98324e76c358e626df51dd697635ebc92db6"
+    },
+    {
+      "modele": "CNN_classique",
+      "graine": 2026,
+      "condition": "bruit_003",
+      "augmentation": "avec",
+      "epoque": 18,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_classique_graine_2026__bruit_003.csv",
+      "sha256": "79e6c4c9ac61dac299753eae80f7ffb5cf79fe640da9eb0fb9a9334273c9d612"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "originale",
+      "augmentation": "avec",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_42__originale.csv",
+      "sha256": "3518217d765c6459028079ff21cdec65b38a55770b9428e3cd7cc8502434a5c9"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "luminosite_090",
+      "augmentation": "avec",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_42__luminosite_090.csv",
+      "sha256": "d347c55bac7e8fb224fc6baae711d72135b18f4b5edfd9371d4d648fb8043a0a"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "luminosite_110",
+      "augmentation": "avec",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_42__luminosite_110.csv",
+      "sha256": "64e2b68d1927eb29b14e4c9d8f973db5c1f2ad825cd7715720544506d3adbbc5"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "contraste_090",
+      "augmentation": "avec",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_42__contraste_090.csv",
+      "sha256": "c6f6b12f30ab6f2caa2a456e6acb00a33558026f2921be0505c113239decc803"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "contraste_110",
+      "augmentation": "avec",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_42__contraste_110.csv",
+      "sha256": "24df4616a2b68345492c54a9ee547f09dcd20f917a1321bc34c1b9a3e1f74610"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "bruit_001",
+      "augmentation": "avec",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_42__bruit_001.csv",
+      "sha256": "8c04ac401efa65abac6f4831432dec1c0d06bd544c77b554e3e08fbf39881dab"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 42,
+      "condition": "bruit_003",
+      "augmentation": "avec",
+      "epoque": 19,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_42__bruit_003.csv",
+      "sha256": "4c5e9029a9cd4e04fecc805d3aaf1e5f2ab1bb85eedd80040f7ecd6d8f3c5cec"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "originale",
+      "augmentation": "avec",
+      "epoque": 17,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_123__originale.csv",
+      "sha256": "89d598f6af96eef67170e61d045a25749db9d09f6c22f96ea31227921d97984f"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "luminosite_090",
+      "augmentation": "avec",
+      "epoque": 17,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_123__luminosite_090.csv",
+      "sha256": "e330ff7e0b05dd3f22bf7545c9601aa75a64e6d4791439677533e3353285e42b"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "luminosite_110",
+      "augmentation": "avec",
+      "epoque": 17,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_123__luminosite_110.csv",
+      "sha256": "0421a8cf9d642b33c66ae023a0087d303b96dbd6583cff94fe5830218eead6c1"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "contraste_090",
+      "augmentation": "avec",
+      "epoque": 17,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_123__contraste_090.csv",
+      "sha256": "373d10a771eef0e4a7864e722025643a58933d8bbd75624f093c9fa62f92ae40"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "contraste_110",
+      "augmentation": "avec",
+      "epoque": 17,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_123__contraste_110.csv",
+      "sha256": "73110af5d2840ed94f9cf135615bf3d41ab4f50820b734734a039da591de0b58"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "bruit_001",
+      "augmentation": "avec",
+      "epoque": 17,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_123__bruit_001.csv",
+      "sha256": "ddb37a3a4e53bcfc4c2160fba00689828df9619b6edc566589579201b263e7e0"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 123,
+      "condition": "bruit_003",
+      "augmentation": "avec",
+      "epoque": 17,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_123__bruit_003.csv",
+      "sha256": "3c5a4d1406dc331c2e3b1e5b03a71b7d3fdea7357f43136f907988fa9541ae4f"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "originale",
+      "augmentation": "avec",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_2026__originale.csv",
+      "sha256": "4c0e3d154dc73fa9cd3a476d513e135f2ac12e466b4ab023c08b936d3e942c1d"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "luminosite_090",
+      "augmentation": "avec",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_2026__luminosite_090.csv",
+      "sha256": "9494c8a1665a04f29e1e07073a37e0f0237e35dd20c1f7d8b1a6681bea641260"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "luminosite_110",
+      "augmentation": "avec",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_2026__luminosite_110.csv",
+      "sha256": "655b3aa7eefc752ef31f7be5e1f1607e33dbad817f51326d5c2b20a1f22637fb"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "contraste_090",
+      "augmentation": "avec",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_2026__contraste_090.csv",
+      "sha256": "d586836794feec8aa384e985d6a7683ba97d0a1637334a55f68c0d1fa035ccab"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "contraste_110",
+      "augmentation": "avec",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_2026__contraste_110.csv",
+      "sha256": "f16cc4f9ab5f4df03a332edecac1af44221c0cd2bf5468649ad33e44a4e4fdd1"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "bruit_001",
+      "augmentation": "avec",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_2026__bruit_001.csv",
+      "sha256": "db451651cb0edd49846fea53ad1f6b095ca6e02900d889c02d9658f078df5ee0"
+    },
+    {
+      "modele": "CNN_CBAM",
+      "graine": 2026,
+      "condition": "bruit_003",
+      "augmentation": "avec",
+      "epoque": 8,
+      "fichier_relatif": "optimisation/robustesse_augmentation_v1/predictions/CNN_CBAM_graine_2026__bruit_003.csv",
+      "sha256": "a21e9b1d885a6ceb5a3d8bcd0c03ab73e5206a0d3bf9d25aa916aa08e6e0ff1e"
+    }
+  ],
+  "graines": [
+    42,
+    123,
+    2026
+  ],
+  "intervalles_calibration": [
+    0.0,
+    0.1,
+    0.2,
+    0.30000000000000004,
+    0.4,
+    0.5,
+    0.6000000000000001,
+    0.7000000000000001,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "convention_intervalles": "borne gauche incluse, droite exclue; dernier intervalle inclut 1",
+  "brier": "moyenne par image de (score_PNEUMONIA - etiquette)**2; echelle binaire [0,1]",
+  "log_loss": "moyenne par image, sans poids de classe; logaddexp sur marge signee",
+  "ece": "PNEUMONIA; somme n_intervalle/N * abs(frequence - score_moyen)",
+  "confiance_examinee": 0.9,
+  "seuil_prediction": "argmax des logits; NORMAL en cas d’egalite",
+  "versions": {
+    "python": "3.11.16 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:36:16) [MSC v.1942 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5"
+  },
+  "limite": "Diagnostic descriptif sur validation reutilisee pour selection et choix de l’augmentation; test deja consulte. Aucun ajustement de calibration. Moyennes et ecarts-types entre graines, pas intervalles de confiance patients."
+}

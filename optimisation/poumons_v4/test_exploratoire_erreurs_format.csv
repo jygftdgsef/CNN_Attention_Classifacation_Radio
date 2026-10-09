@@ -1,0 +1,9 @@
+﻿erreur,version,modele,format le plus étroit,format intermédiaire,format le plus large
+faux positifs (radios NORMAL),v3 sans raccourci,CNN_classique,58.441558441558442,59.307359307359299,77.056277056277054
+faux positifs (radios NORMAL),v3 sans raccourci,CNN_CBAM,44.588744588744589,46.753246753246749,72.727272727272734
+faux positifs (radios NORMAL),v4 recadrage poumons,CNN_classique,35.064935064935064,19.913419913419915,40.259740259740262
+faux positifs (radios NORMAL),v4 recadrage poumons,CNN_CBAM,32.467532467532465,18.614718614718615,45.887445887445885
+faux négatifs (radios PNEUMONIA),v3 sans raccourci,CNN_classique,3.1007751937984498,2.3255813953488373,0.77519379844961245
+faux négatifs (radios PNEUMONIA),v3 sans raccourci,CNN_CBAM,2.3255813953488373,1.8087855297157625,0.77519379844961245
+faux négatifs (radios PNEUMONIA),v4 recadrage poumons,CNN_classique,2.5839793281653747,3.6175710594315245,0.77519379844961245
+faux négatifs (radios PNEUMONIA),v4 recadrage poumons,CNN_CBAM,3.6175710594315245,4.909560723514212,0.516795865633075

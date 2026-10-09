@@ -1,0 +1,16 @@
+{
+  "modele": "CNNAvecCBAM",
+  "critere_selection": "maximum du F1 macro de validation",
+  "epoque_retenue": 9,
+  "nombre_epoques_executees": 10,
+  "sauvegarde_source": "epoque_9.pt",
+  "sauvegarde_retenue": "meilleur_cnn_cbam.pt",
+  "mesures_validation": {
+    "val_perte": 0.1162039510166153,
+    "val_exactitude": 0.95697796432319,
+    "val_precision_pneumonie": 0.9863842662632376,
+    "val_rappel_pneumonie": 0.953216374269006,
+    "val_f1_pneumonie": 0.9695167286245352,
+    "val_f1_macro": 0.9482164748292016
+  }
+}

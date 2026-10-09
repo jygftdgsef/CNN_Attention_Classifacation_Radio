@@ -1,0 +1,17 @@
+{
+  "indice": 4,
+  "lr": 0.0005,
+  "dropout": 0.5,
+  "epoque_retenue": 19,
+  "epoque_finale": 20,
+  "arret": "maximum_epoques",
+  "duree_minutes": 75.09160307999991,
+  "sauvegarde": "C:\\Users\\David KUNYIMA\\OneDrive\\Desktop\\Memoire_CNN_Attention\\optimisation\\cnn_classique_grille_v1\\configuration_04\\meilleur.pt",
+  "val_perte": 0.10943292243247918,
+  "val_exactitude": 0.9653725078698846,
+  "val_precision_pneumonie": 0.9836552748885586,
+  "val_rappel_pneumonie": 0.9678362573099415,
+  "val_specificite_NORMAL": 0.9591078066914498,
+  "val_f1_pneumonie": 0.9756816507000737,
+  "val_f1_macro": 0.9577861805412937
+}

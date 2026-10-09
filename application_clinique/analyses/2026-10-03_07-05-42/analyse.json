@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "version_application": "2.0",
+  "horodatage_analyse": "2026-10-03T07:05:42",
+  "reference": "",
+  "systeme": "v4 recadrage poumons|CNN_CBAM",
+  "version_courte": "v4",
+  "modele": "CNN_CBAM",
+  "systeme_lisible": "v4, recadrage sur les poumons · CNN + CBAM",
+  "source_seuils": "développement",
+  "seuils": {
+    "seuil_bas": -1.303439552585284,
+    "seuil_haut": -0.8357325618465742,
+    "zones_chevauchantes": false,
+    "n_normal": 269,
+    "n_pneumonie": 684,
+    "cible_sensibilite_verte": 0.98,
+    "cible_specificite_rouge": 0.9
+  },
+  "score": 0.08063508073488872,
+  "scores_graines": [
+    -0.044991880655288696,
+    0.7097287178039551,
+    -0.42283159494400024
+  ],
+  "ecart_type_graines": 0.4708218456939833,
+  "zone_avant_regle": "ROUGE",
+  "zone_finale": "ROUGE",
+  "alertes": [],
+  "alertes_libelles": [],
+  "statistiques_image": {
+    "largeur": 1726,
+    "hauteur": 1505,
+    "rapport": 1.146843853820598,
+    "cote_min": 1505,
+    "moyenne": 0.5555687675855095,
+    "ecart_type": 0.25551448538502175,
+    "part_bandes_noires": 0.07421875
+  },
+  "empreinte_image": "623c975f6cec114e",
+  "poumons": {
+    "valide": true,
+    "raisons": [],
+    "aire": 0.4041290283203125
+  },
+  "attention": {
+    "minimum": 0.37678298354148865,
+    "maximum": 0.9990552067756653,
+    "moyenne": 0.8698367916911185,
+    "moyenne_poumons": 0.9190457004562727,
+    "moyenne_hors_poumons": 0.8255437424072563
+  },
+  "duree_secondes": 11.088316600013059,
+  "dossier": "2026-10-03_07-05-42",
+  "fichiers": {
+    "radio": "radio.png",
+    "entree": "entree_reseau.png",
+    "decision": "carte_gradcam.png",
+    "attention": "carte_attention.png",
+    "rapport": "rapport.pdf",
+    "donnees": "analyse.json"
+  },
+  "horodatage_enregistrement": "2026-10-03T07:05:54"
+}
